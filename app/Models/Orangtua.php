@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
-class Orangtua extends Model
+class Orangtua extends Authenticatable
 {
     use HasFactory;
     protected $table = 'orangtua';

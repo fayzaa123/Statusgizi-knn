@@ -40,6 +40,10 @@ return [
             'driver' => 'session',
             'provider' => 'users',
         ],
+        'ortu' => [
+            'driver' => 'session',
+            'provider' => 'orangtua',
+        ],
     ],
 
     /*
@@ -64,6 +68,10 @@ return [
             'driver' => 'eloquent',
             'model' => env('AUTH_MODEL', App\Models\User::class),
         ],
+        'orangtua' => [
+            'driver' => 'eloquent',
+            'model' => env('AUTH_MODEL', App\Models\Orangtua::class),
+        ]
 
         // 'users' => [
         //     'driver' => 'database',

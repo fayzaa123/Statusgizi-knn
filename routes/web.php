@@ -23,7 +23,7 @@ Route::get('/admin/dataset', function () {
 
 Route::get('/admin/dashboard', function () {
     return view('admin.dashboard-admin');
-});
+})->name('dashboard-admin');
 
 Route::get('/user/dashboard', function () {
     return view('user.dashboard-user');
