@@ -77,7 +77,7 @@
                 </div>
                 <div class="col-sm-6">
                   <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="{{ url('user.formhitung') }}">                                       
+                    <li class="breadcrumb-item"><a href="{{ url('user.hitung') }}">                                       
                         <svg class="stroke-icon">
                           <use href="{{ asset('svg/icon-sprite.svg#stroke-widget') }}"></use>
                         </svg></a></li>

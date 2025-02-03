@@ -34,7 +34,7 @@
          
             <li class="sidebar-list">
               <i class="fa-solid fa-thumbtack"></i>
-              <a class="sidebar-link sidebar-title link-nav" href="{{ url('user/formhitung') }}">
+              <a class="sidebar-link sidebar-title link-nav" href="{{ url('user/hitung') }}">
                   <svg class="stroke-icon">
                       <use href="{{ asset('svg/icon-sprite.svg#stroke-widget') }}"></use>
                   </svg>
