@@ -8,6 +8,6 @@ class LandingController
 {
     public function landing()
     {
-        return view('landing-page');
+        return view('landing.page');
     }
 }
