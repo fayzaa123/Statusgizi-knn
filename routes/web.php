@@ -7,6 +7,7 @@ use App\Http\Controllers\DatasetController;
 use App\Http\Controllers\DatauserController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\HitungController;
+use App\Http\Controllers\HasilController;
 use App\Http\Controllers\LandingController;
 
 Route::get('/', function () {
@@ -42,7 +43,11 @@ Route::get('/user/hitung', function () {
 });
 
 Route::get('/landing', function () {
-    return view('landing-page');
+    return view('landing.page');
+});
+
+Route::get('/user/hasil', function () {
+    return view('user.hasil');
 });
 
 
