@@ -77,7 +77,6 @@
                         <svg class="stroke-icon">
                           <use href="{{ asset('svg/icon-sprite.svg#stroke-home') }}"></use>
                         </svg></a></li>
-                    <li class="breadcrumb-item">Hasil</li>
                     <li class="breadcrumb-item active">Hasil Hitung</li>
                   </ol>
                 </div>
@@ -95,7 +94,7 @@
                     <div class="tab-content" id="add-product-pills-tabContent">
                       <div class="tab-pane fade show active" id="overview-project" role="tabpanel" aria-labelledby="overview-project-tab">
                         <div class="row"> 
-                          <div class="col-xxl-8 box-col-12">
+                          <div class="col-12">
                             <div class="card main-summary">                              
                               <div class="card-header card-no-border"> 
                                 <div class="common-space"> 
@@ -128,7 +127,7 @@
                               </div>
                               <div class="card-body linear-divider">
                                 <h5>Hasil Rekomendasi Status Gizi</h5>
-                                <div class="animated-divider animated-line"></div>
+                                <div class="divider-h-line bg-primary"></div>
                                 <p class="mb-0 c-light">This CSS divider embodies simplicity at its finest, yet it exudes an air of elegance and timelessness. Despite its minimalist design, it commands attention effortlessly. While the divider takes center stage in this arrangement, it seamlessly integrates with the overall aesthetic, allowing the backdrop image to shine through. </p>
                               </div>
                             </div>
@@ -156,6 +155,7 @@
                               <th scope="col">Nama Balita</th>
                               <th scope="col">Usia</th>
                               <th scope="col">Jenis Kelamin</th>
+                              <th scope="col">Berat Badan</th>
                               <th scope="col">Tinggi Badan</th>
                               <th scope="col">Jarak</th>
                               <th scope="col">Status Gizi</th>
@@ -165,62 +165,62 @@
                             <tr class="border-bottom-secondary">
                               <th scope="row">1</th>
                               <td>Ram Jacob</td>
-                              <td>Wolfe</td>
-                              <td>RamJacob@twitter</td>
-                              <td>Developer</td>
-                              <td>Apple Inc.</td>
-                              <td> <span class="badge badge-light-danger">Php</span></td>
-                              
+                              <td>20</td>
+                              <td>Laki-Laki</td>
+                              <td>12</td>
+                              <td>100</td>
+                              <td>20.3445</td>
+                              <td>Baik</td>                   
                             </tr>
-                            <tr class="border-bottom-success">
-                              <th scope="row">2</th>
-                              <td>John Deo</td>
-                              <td>Gummer</td>
-                              <td>JohnDeo@twitter	</td>
-                              <td>Designer</td>
-                              <td>Hewlett packard	</td>
-                              <td> <span class="badge badge-light-primary">Html</span></td>
-                              
+                            <tr class="border-bottom-secondary">
+                              <th scope="row">1</th>
+                              <td>monic</td>
+                              <td>30</td>
+                              <td>Perempuan</td>
+                              <td>6</td>
+                              <td>100</td>
+                              <td>23.3445</td>
+                              <td>Buruk</td>                   
                             </tr>
-                            <tr class="border-bottom-info">
-                              <th scope="row">3</th>
-                              <td>Elana John</td>
-                              <td>Cazale	</td>
-                              <td>ElanaJohn@twitter</td>
-                              <td>Designer</td>
-                              <td>Microsoft</td>
-                              <td> <span class="badge badge-light-danger">Pug</span></td>
-                              
+                            <tr class="border-bottom-secondary">
+                              <th scope="row">1</th>
+                              <td>Jony</td>
+                              <td>12</td>
+                              <td>Laki-Laki</td>
+                              <td>6</td>
+                              <td>80</td>
+                              <td>24.3445</td>
+                              <td>Kurang</td>                   
                             </tr>
-                            <tr class="border-bottom-warning">
-                              <th scope="row">4</th>
-                              <td>Meryl Streep</td>
-                              <td>Roberts</td>
-                              <td>MerylStreep@twitter</td>
-                              <td>Developer</td>
-                              <td>Tata Ltd.	</td>
-                              <td> <span class="badge badge-light-success">React</span></td>
-                              
+                            <tr class="border-bottom-secondary">
+                              <th scope="row">1</th>
+                              <td>Ram Jacob</td>
+                              <td>20</td>
+                              <td>Laki-Laki</td>
+                              <td>6</td>
+                              <td>100</td>
+                              <td>25.3445</td>
+                              <td>Baik</td>                   
                             </tr>
-                            <tr class="border-bottom-danger">
-                              <th scope="row">5</th>
-                              <td>Emma Stone</td>
-                              <td>Stone</td>
-                              <td>EmmaStone@twitter	</td>
-                              <td>Developer</td>
-                              <td>Wipro Ltd.	</td>
-                              <td> <span class="badge badge-light-primary">Vue</span></td>
-                              
+                            <tr class="border-bottom-secondary">
+                              <th scope="row">1</th>
+                              <td>Ram Jacob</td>
+                              <td>20</td>
+                              <td>Laki-Laki</td>
+                              <td>6</td>
+                              <td>100</td>
+                              <td>26.3445</td>
+                              <td>Baik</td>                   
                             </tr>
-                            <tr class="border-bottom-light"> 
-                              <th scope="row">6</th>
-                              <td>Eliana Jons</td>
-                              <td>Jons</td>
-                              <td>ElianaJons@twitter		</td>
-                              <td>Developer</td>
-                              <td>Info Ltd.		</td>
-                              <td> <span class="badge badge-light-success">Vue</span></td>
-                              
+                            <tr class="border-bottom-secondary">
+                              <th scope="row">1</th>
+                              <td>Ram Jacob</td>
+                              <td>20</td>
+                              <td>Laki-Laki</td>
+                              <td>6</td>
+                              <td>100</td>
+                              <td>20.3445</td>
+                              <td>Baik</td>                   
                             </tr>
                           </tbody>
                         </table>
@@ -240,7 +240,7 @@
           <div class="container-fluid">
             <div class="row">
               <div class="col-md-12 footer-copyright text-center">
-                <p class="mb-0">Copyright <span class="year-update"> </span> © Cuba Theme By Pixelstrap  </p>
+                <p class="mb-0">Copyright <span class="year-update"> </span> © fayzamartadevia  </p>
               </div>
             </div>
           </div>
