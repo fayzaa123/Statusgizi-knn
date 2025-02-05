@@ -50,6 +50,8 @@ Route::get('/user/hasil', function () {
     return view('user.hasil');
 });
 
+Route::get('/user/hitung', [HitungController::class, 'ukur_balita'])->name('tampil.hitung');
+Route::post('/hitung/klasifikasi', [HitungController::class,'hitungKlasifikasi'])->name('hitung.klasifikasi');
 
 
 // Route untuk halaman login dan register

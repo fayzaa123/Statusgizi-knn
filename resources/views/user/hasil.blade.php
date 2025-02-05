@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Cuba admin is super flexible, powerful, clean &amp; modern responsive bootstrap 5 admin template with unlimited possibilities.">
-    <meta name="keywords" content="admin template, Cuba admin template, dashboard template, flat admin template, responsive admin template, web app">
+    <meta name="description"
+        content="Cuba admin is super flexible, powerful, clean &amp; modern responsive bootstrap 5 admin template with unlimited possibilities.">
+    <meta name="keywords"
+        content="admin template, Cuba admin template, dashboard template, flat admin template, responsive admin template, web app">
     <meta name="author" content="pixelstrap">
     <link rel="icon" href="{{ asset('images/favicon.png') }}" type="image/x-icon">
     <link rel="shortcut icon" href="{{ asset('images/favicon.png') }}" type="image/x-icon">
@@ -13,7 +16,8 @@
 
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Rubik:400,400i,500,500i,700,700i&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i,900&display=swap"
+        rel="stylesheet">
 
     <!-- CSS Libraries -->
     <link rel="stylesheet" type="text/css" href="{{ asset('css/fontawesome.css') }}">
@@ -36,18 +40,20 @@
 
     <!-- Responsive CSS -->
     <link rel="stylesheet" type="text/css" href="{{ asset('css/responsive.css') }}">
-  </head>
-  <body> 
+</head>
+
+<body>
     <!-- loader starts-->
     <div class="loader-wrapper">
-      <div class="loader-index"> <span></span></div>
-      <svg>
-        <defs></defs>
-        <filter id="goo">
-          <fegaussianblur in="SourceGraphic" stddeviation="11" result="blur"></fegaussianblur>
-          <fecolormatrix in="blur" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9" result="goo"> </fecolormatrix>
-        </filter>
-      </svg>
+        <div class="loader-index"> <span></span></div>
+        <svg>
+            <defs></defs>
+            <filter id="goo">
+                <fegaussianblur in="SourceGraphic" stddeviation="11" result="blur"></fegaussianblur>
+                <fecolormatrix in="blur" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9" result="goo">
+                </fecolormatrix>
+            </filter>
+        </svg>
     </div>
     <!-- loader ends-->
     <!-- tap on top starts-->
@@ -55,197 +61,162 @@
     <!-- tap on tap ends-->
     <!-- page-wrapper Start-->
     <div class="page-wrapper default-wrapper" id="pageWrapper">
-      <!-- Page Header Start-->
-      @include('component.navbar')
-      <!-- Page Header Ends                              -->
-      <!-- Page Body Start-->
-      <div class="page-body-wrapper default-menu default-menu">
-        <!-- Page Sidebar Start-->
-        @include('component.sidebar-user')
-        <!-- Page Sidebar Ends-->
-        <div class="page-body">
-          <div class="container-fluid">
-            <div class="page-title">
-              <div class="row">
-                <div class="col-sm-6">
-                  <h3>
-                     Hasil</h3>
-                </div>
-                <div class="col-sm-6">
-                  <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="{{ url('user.hasil') }}">                                       
-                        <svg class="stroke-icon">
-                          <use href="{{ asset('svg/icon-sprite.svg#stroke-home') }}"></use>
-                        </svg></a></li>
-                    <li class="breadcrumb-item active">Hasil Hitung</li>
-                  </ol>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- Container-fluid starts-->
-          <div class="container-fluid main-scope-project">
-            <div class="row scope-bottom-wrapper">
-              
-              
-                <div class="row">
-                  
-                  <div class="col-12">
-                    <div class="tab-content" id="add-product-pills-tabContent">
-                      <div class="tab-pane fade show active" id="overview-project" role="tabpanel" aria-labelledby="overview-project-tab">
-                        <div class="row"> 
-                          <div class="col-12">
-                            <div class="card main-summary">                              
-                              <div class="card-header card-no-border"> 
-                                <div class="common-space"> 
-                                  <div class="left-header-content">
-                                    <h5>Hasil Status Gizi</h5>
-                                  </div>
-                                  <div class="card-header-right-btn"><a class="c-o-light" href="{{ url('user.datahasil') }}">View All</a></div>
-                                </div>
-                              </div>
-                              <div class="card-body pt-0"> 
-                                <div class="row"> 
-                                  <div class="col-xxl-8 box-col-12">
-                                    <ul class="summary-section">
-                                                                              
-                                            <li>
-                                              <ul>
-                                                <li> 
-                                                  <p class="mb-1">Nilai K</p><span class="badge badge-light-primary">5</span>
-                                                </li>
-                                                <li> 
-                                                  <p class="mb-1">Status Gizi</p><span class="badge badge-light-success">Baik</span>
-                                                </li>
-                                              </ul>
-                                            </li>                                           
-                                          
-                                      </ul>
-                                                                             
-                                  </div>
-                                </div>
-                              </div>
-                              <div class="card-body linear-divider">
-                                <h5>Hasil Rekomendasi Status Gizi</h5>
-                                <div class="divider-h-line bg-primary"></div>
-                                <p class="mb-0 c-light">This CSS divider embodies simplicity at its finest, yet it exudes an air of elegance and timelessness. Despite its minimalist design, it commands attention effortlessly. While the divider takes center stage in this arrangement, it seamlessly integrates with the overall aesthetic, allowing the backdrop image to shine through. </p>
-                              </div>
+        <!-- Page Header Start-->
+        @include('component.navbar')
+        <!-- Page Header Ends                              -->
+        <!-- Page Body Start-->
+        <div class="page-body-wrapper default-menu default-menu">
+            <!-- Page Sidebar Start-->
+            @include('component.sidebar-user')
+            <!-- Page Sidebar Ends-->
+            <div class="page-body">
+                <div class="container-fluid">
+                    <div class="page-title">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <h3>
+                                    Hasil</h3>
                             </div>
-                          </div>
-                          
-                          
-                          
-                          
+                            <div class="col-sm-6">
+                                <ol class="breadcrumb">
+                                    <li class="breadcrumb-item"><a href="{{ url('user.hasil') }}">
+                                            <svg class="stroke-icon">
+                                                <use href="{{ asset('svg/icon-sprite.svg#stroke-home') }}"></use>
+                                            </svg></a></li>
+                                    <li class="breadcrumb-item active">Hasil Hitung</li>
+                                </ol>
+                            </div>
                         </div>
-                      </div>
                     </div>
-                  </div>
-
-                  <div class="col-sm-12">
-                    <div class="card">
-                      <div class="card-header">
-                        <h5>5 Tetangga Terdekat</h5>
-                        
-                      </div>
-                      <div class="table-responsive custom-scrollbar">
-                        <table class="table border-bottom-table">
-                          <thead>
-                            <tr class="border-bottom-primary">
-                              <th scope="col">No</th>
-                              <th scope="col">Nama Balita</th>
-                              <th scope="col">Usia</th>
-                              <th scope="col">Jenis Kelamin</th>
-                              <th scope="col">Berat Badan</th>
-                              <th scope="col">Tinggi Badan</th>
-                              <th scope="col">Jarak</th>
-                              <th scope="col">Status Gizi</th>
-                                                          </tr>
-                          </thead>
-                          <tbody>
-                            <tr class="border-bottom-secondary">
-                              <th scope="row">1</th>
-                              <td>Ram Jacob</td>
-                              <td>20</td>
-                              <td>Laki-Laki</td>
-                              <td>12</td>
-                              <td>100</td>
-                              <td>20.3445</td>
-                              <td>Baik</td>                   
-                            </tr>
-                            <tr class="border-bottom-secondary">
-                              <th scope="row">1</th>
-                              <td>monic</td>
-                              <td>30</td>
-                              <td>Perempuan</td>
-                              <td>6</td>
-                              <td>100</td>
-                              <td>23.3445</td>
-                              <td>Buruk</td>                   
-                            </tr>
-                            <tr class="border-bottom-secondary">
-                              <th scope="row">1</th>
-                              <td>Jony</td>
-                              <td>12</td>
-                              <td>Laki-Laki</td>
-                              <td>6</td>
-                              <td>80</td>
-                              <td>24.3445</td>
-                              <td>Kurang</td>                   
-                            </tr>
-                            <tr class="border-bottom-secondary">
-                              <th scope="row">1</th>
-                              <td>Ram Jacob</td>
-                              <td>20</td>
-                              <td>Laki-Laki</td>
-                              <td>6</td>
-                              <td>100</td>
-                              <td>25.3445</td>
-                              <td>Baik</td>                   
-                            </tr>
-                            <tr class="border-bottom-secondary">
-                              <th scope="row">1</th>
-                              <td>Ram Jacob</td>
-                              <td>20</td>
-                              <td>Laki-Laki</td>
-                              <td>6</td>
-                              <td>100</td>
-                              <td>26.3445</td>
-                              <td>Baik</td>                   
-                            </tr>
-                            <tr class="border-bottom-secondary">
-                              <th scope="row">1</th>
-                              <td>Ram Jacob</td>
-                              <td>20</td>
-                              <td>Laki-Laki</td>
-                              <td>6</td>
-                              <td>100</td>
-                              <td>20.3445</td>
-                              <td>Baik</td>                   
-                            </tr>
-                          </tbody>
-                        </table>
-                      </div>
-                    </div>
-                  </div>
-
-                  
                 </div>
-              
+                <!-- Container-fluid starts-->
+                <div class="container-fluid main-scope-project">
+                    <div class="row scope-bottom-wrapper">
+
+
+                        <div class="row">
+
+                            <div class="col-12">
+                                <div class="tab-content" id="add-product-pills-tabContent">
+                                    <div class="tab-pane fade show active" id="overview-project" role="tabpanel"
+                                        aria-labelledby="overview-project-tab">
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <div class="card main-summary">
+                                                    <div class="card-header card-no-border">
+                                                        <div class="common-space">
+                                                            <div class="left-header-content">
+                                                                <h5>Hasil Status Gizi</h5>
+                                                            </div>
+                                                            <div class="card-header-right-btn"><a class="c-o-light"
+                                                                    href="{{ url('user.datahasil') }}">View All</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="card-body pt-0">
+                                                        <div class="row">
+                                                            <div class="col-xxl-8 box-col-12">
+                                                                <ul class="summary-section">
+
+                                                                    <li>
+                                                                        <ul>
+                                                                            <li>
+                                                                                <p class="mb-1">Nilai K</p><span
+                                                                                    class="badge badge-light-primary">{{ $k }}</span>
+                                                                            </li>
+                                                                            <li>
+                                                                                <p class="mb-1">Status Gizi</p><span
+                                                                                    class="badge badge-light-success">{{ $status_gizi }}</span>
+                                                                            </li>
+                                                                        </ul>
+                                                                    </li>
+
+                                                                </ul>
+
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="card-body linear-divider">
+                                                        <h5>Hasil Rekomendasi Status Gizi</h5>
+                                                        <div class="divider-h-line bg-primary"></div>
+                                                        <p class="mb-0 c-light">This CSS divider embodies simplicity at
+                                                            its finest, yet it exudes an air of elegance and
+                                                            timelessness. Despite its minimalist design, it commands
+                                                            attention effortlessly. While the divider takes center stage
+                                                            in this arrangement, it seamlessly integrates with the
+                                                            overall aesthetic, allowing the backdrop image to shine
+                                                            through. </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+
+
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-12">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <h5>{{ $k }} Tetangga Terdekat</h5>
+
+                                    </div>
+                                    <div class="table-responsive custom-scrollbar">
+                                        <table class="table border-bottom-table">
+                                            <thead>
+                                                <tr class="border-bottom-primary">
+                                                    <th scope="col">No</th>
+                                                    <th scope="col">Nama Balita</th>
+                                                    <th scope="col">Usia</th>
+                                                    <th scope="col">Jenis Kelamin</th>
+                                                    <th scope="col">Berat Badan</th>
+                                                    <th scope="col">Tinggi Badan</th>
+                                                    <th scope="col">Jarak</th>
+                                                    <th scope="col">Status Gizi</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                @foreach ($neighbors as $index => $neighbor)
+                                                    <tr class="border-bottom-secondary">
+                                                        <th scope="row">{{ $index + 1 }}</th>
+                                                        <td>{{ $neighbor['nama'] }}</td>
+                                                        <td>{{ $neighbor['usia'] }}</td>
+                                                        <td>{{ $neighbor['jenis_kelamin'] }}</td>
+                                                        <td>{{ $neighbor['berat'] }}</td>
+                                                        <td>{{ $neighbor['tinggi'] }}</td>
+                                                        <td>{{ number_format($neighbor['distance'], 4) }}</td>
+                                                        <td>{{ $neighbor['status_gizi'] }}</td>
+                                                    </tr>
+                                                @endforeach
+
+                                               
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+
+                    </div>
+                </div>
+                <!-- Container-fluid Ends-->
             </div>
-          </div>
-          <!-- Container-fluid Ends-->
+            <!-- footer start-->
+            <footer class="footer">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-12 footer-copyright text-center">
+                            <p class="mb-0">Copyright <span class="year-update"> </span> © fayzamartadevia </p>
+                        </div>
+                    </div>
+                </div>
+            </footer>
         </div>
-        <!-- footer start-->
-        <footer class="footer">
-          <div class="container-fluid">
-            <div class="row">
-              <div class="col-md-12 footer-copyright text-center">
-                <p class="mb-0">Copyright <span class="year-update"> </span> © fayzamartadevia  </p>
-              </div>
-            </div>
-          </div>
-        </footer>
-      </div>
     </div>
     <!-- Latest jQuery -->
     <script src="{{ asset('js/jquery.min.js') }}"></script>
@@ -285,5 +256,6 @@
     <script src="{{ asset('js/script.js') }}"></script>
     <script src="{{ asset('js/script1.js') }}"></script>
     <script src="{{ asset('js/theme-customizer/customizer.js') }}"></script>
-  </body>
+</body>
+
 </html>

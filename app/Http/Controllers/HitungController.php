@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Balita;
 use Illuminate\Http\Request;
 
 class HitungController
@@ -13,77 +14,62 @@ class HitungController
 
     public function hitungKlasifikasi(Request $request)
     {
-        // Validating the form inputs
-        $validated = $request->validate([
-            'tetangga_terdekat' => 'required|integer',
-            'nama' => 'required|string',
-            'jenis_kelamin' => 'required|integer',
-            'umur' => 'required|integer',
-            'berat_badan' => 'required|numeric',
-            'tinggi_badan' => 'required|numeric',
+        // Validate input
+        $request->validate([
+            'umur' => 'required|numeric',
+            'berat' => 'required|numeric',
+            'tinggi' => 'required|numeric',
+            'k' => 'required|numeric' // number of neighbors
         ]);
 
-        $k = intval($validated["tetangga_terdekat"]);
+        // Get training data from database
+        $trainingData = Balita::all();
 
-        // Prepare the data for classification
-        $dataUntukDihitung = [
-            "nama" =>  $validated["nama"],
-            "jenis_kelamin" =>  intval($validated["jenis_kelamin"]),
-            "umur" =>  intval($validated["umur"]),
-            "berat_badan" =>  doubleval($validated["berat_badan"]),
-            "tinggi_badan" =>  doubleval($validated["tinggi_badan"]),
-        ];
-
-        // Retrieve all the dataset
-        $semuaData = Data::all(); // You may have a custom method to retrieve this data
-
-        // Define the schema
-        $schema = new Schema();
-        $schema
-            ->tambahParameter('jenis_kelamin')
-            ->tambahParameter('umur')
-            ->tambahParameter('berat_badan')
-            ->tambahParameter('tinggi_badan')
-            ->setParameterKlasifikasi('klasifikasi');
-
-        // Create the dataset
-        $dataset = new DataSet($schema, $k);
-
-        foreach ($semuaData as $data) {
-            $dataset->tambah(new Data([
+        // Calculate distances
+        $distances = [];
+        foreach ($trainingData as $data) {
+            $distance = sqrt(
+                pow($data->umur - $request->umur, 2) +
+                pow($data->berat - $request->berat, 2) +
+                pow($data->tinggi - $request->tinggi, 2)
+            );
+            $distances[] = [
                 'nama' => $data->nama,
-                'jenis_kelamin' => intval($data->jenis_kelamin),
-                'umur' => intval($data->umur),
-                'berat_badan' => floatval($data->berat_badan),
-                'tinggi_badan' => floatval($data->tinggi_badan),
-                'klasifikasi' => $data->klasifikasi
-            ]));
+                'usia' => $data->usia,
+                'jenis_kelamin' => $data->jenis_kelamin,
+                'berat' => $data->berat,
+                'tinggi' => $data->tinggi,
+                'distance' => $distance,
+                'status_gizi' => $data->status_gizi
+            ];
         }
 
-        // Perform the classification
-        $hasil = $dataset->hitung(
-            new Data([
-                'nama' => $dataUntukDihitung["nama"],
-                'jenis_kelamin' => $dataUntukDihitung["jenis_kelamin"],
-                'umur' => $dataUntukDihitung["umur"],
-                'berat_badan' => $dataUntukDihitung["berat_badan"],
-                'tinggi_badan' => $dataUntukDihitung["tinggi_badan"],
-            ])
-        );
+        // Sort distances
+        usort($distances, function($a, $b) {
+            return $a['distance'] <=> $b['distance'];
+        });
 
-        $hasilHitung = $hasil["hasil_hitung"];
-        $tetanggaTerdekat = $hasil["tetangga_terdekat"];
-        $dataHasilHitungYangTerurut = $hasil["data_hasil_hitung_yang_terurut"];
+        // Get k nearest neighbors
+        $k = $request->k;
+        $neighbors = array_slice($distances, 0, $k);
 
-        // Save the result into the session
-        session([
-            'dataUntukDihitung' => $dataUntukDihitung,
+        // Count status frequencies
+        $statusCount = [];
+        foreach ($neighbors as $neighbor) {
+            $status = $neighbor['status_gizi'];
+            if (!isset($statusCount[$status])) {
+                $statusCount[$status] = 0;
+            }
+            $statusCount[$status]++;
+        }
+
+        // Get most frequent status
+        $predictedStatus = array_search(max($statusCount), $statusCount);
+
+        return view('user.hasil', [
+            'status_gizi' => $predictedStatus,
+            'neighbors' => $neighbors,
             'k' => $k,
-            'dataHasilHitungYangTerurut' => $dataHasilHitungYangTerurut,
-            'hasilHitung' => $hasilHitung,
         ]);
-
-        // Redirect to the result page
-        return redirect()->route('hasilHitung');
     }
 }
