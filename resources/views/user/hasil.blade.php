@@ -139,13 +139,9 @@
                                                     <div class="card-body linear-divider">
                                                         <h5>Hasil Rekomendasi Status Gizi</h5>
                                                         <div class="divider-h-line bg-primary"></div>
-                                                        <p class="mb-0 c-light">This CSS divider embodies simplicity at
-                                                            its finest, yet it exudes an air of elegance and
-                                                            timelessness. Despite its minimalist design, it commands
-                                                            attention effortlessly. While the divider takes center stage
-                                                            in this arrangement, it seamlessly integrates with the
-                                                            overall aesthetic, allowing the backdrop image to shine
-                                                            through. </p>
+                                                        @foreach ($rekomendasi as $saran)
+                                                            <li class="mb-0 c-light">{{ $saran }}</li>
+                                                        @endforeach
                                                     </div>
                                                 </div>
                                             </div>
@@ -192,7 +188,7 @@
                                                     </tr>
                                                 @endforeach
 
-                                               
+
                                             </tbody>
                                         </table>
                                     </div>
