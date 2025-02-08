@@ -54,7 +54,7 @@
                   <svg class="fill-icon">
                       <use href="{{ asset('svg/icon-sprite.svg#fill-form') }}"></use>
                   </svg>
-                  <span>Data Hasil hitung</span>-->
+                  <span>Hasil</span>-->
               </a>
             </li>
           </ul>

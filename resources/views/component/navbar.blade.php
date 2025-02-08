@@ -37,7 +37,7 @@
           <li class="profile-nav onhover-dropdown pe-0 py-0">
             <div class="d-flex profile-media"><img class="b-r-10" src="{{ asset('images/dashboard/profile.png') }}" alt="">
               <div class="flex-grow-1"><span>Fayza</span>
-                <p class="mb-0">Admin <i class="middle fa-solid fa-angle-down"></i></p>
+                <p class="mb-0"> <i class="middle fa-solid fa-angle-down"></i></p>
               </div>
             </div>
             <ul class="profile-dropdown onhover-show-div">

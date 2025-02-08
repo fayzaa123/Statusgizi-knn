@@ -110,7 +110,7 @@
                                         <div class="modal fade" id="dashboard8" tabindex="-1"
                                             aria-labelledby="dashboard8" aria-hidden="true">
                                             <!-- Modal HTML -->
-                                            <div class="modal-dialog modal-dialog-centered modal-lg">
+                                            <!--<div class="modal-dialog modal-dialog-centered modal-lg">
                                                 <div class="modal-content category-popup">
                                                     <div class="modal-header">
                                                         <h5 class="modal-title" id="modaldashboard">Tambah Data</h5>
@@ -125,7 +125,7 @@
                                                                         <h5>Form Hitung Gizi Balita</h5>
                                                                     </div>
                                                                     <div class="card-body">
-                                                                        <!-- Form -->
+                                                                         Form 
                                                                         <form id="balitaForm" method="POST"
                                                                             action="{{ route('datauser.store') }}"
                                                                             class="row g-3 needs-validation custom-input"
@@ -137,7 +137,7 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                            </div>
+                                            </div>-->
 
                                         </div>
                                     </div>
