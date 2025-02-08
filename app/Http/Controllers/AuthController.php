@@ -51,7 +51,7 @@ class AuthController
         // Coba autentikasi pengguna
         if (Auth::guard('ortu')->attempt($credentials)) {
             $request->session()->regenerate();
-            return redirect()->intended('user-dashboard');
+            return redirect()->intended('user/dashboard');
         }
 
         // Jika autentikasi gagal, kembalikan kembali ke halaman login dengan pesan kesalahan

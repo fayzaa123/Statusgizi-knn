@@ -125,7 +125,7 @@
                                         </div>
 
                                         <div class="col-md-4 position-relative">
-                                            <label class="form-label" for="validationTooltip02">Usia (minggu)</label>
+                                            <label class="form-label" for="validationTooltip02">Usia (bulan)</label>
                                             <input class="form-control" id="validationTooltip02" type="text"
                                                 placeholder="Umur" required="" name="umur">
                                             <div class="valid-tooltip">Looks good!</div>
