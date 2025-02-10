@@ -104,9 +104,9 @@
                         <div class="col-sm-12">
                             <div class="card">
                                 <div class="card-header card-no-border text-end">
-                                    <div class="card-header-right-icon"><a class="btn btn-primary f-w-500"
-                                            href="#!" data-bs-toggle="modal" data-bs-target="#dashboard8"><i
-                                                class="fa-solid fa-plus pe-2"></i>Tambah Data</a>
+                                    <div class="card-header-right-icon"><a class="btn btn-primary f-w-">
+                                            <!--href="#" data-bs-toggle="modal" data-bs-target="#dashboard8"><i
+                                                class="fa-solid fa-plus pe-2"></i>Tambah Data--></a>
                                         <div class="modal fade" id="dashboard8" tabindex="-1"
                                             aria-labelledby="dashboard8" aria-hidden="true">
                                             <!-- Modal HTML -->
