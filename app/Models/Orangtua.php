@@ -12,4 +12,10 @@ class Orangtua extends Authenticatable
     protected $table = 'orangtua';
     protected $primaryKey = 'id';
     protected $fillable = ['nama', 'email', 'password'];
+
+
+    public function getIsAdminAttribute(): bool
+    {
+        return $this->email === 'admin@gmail.com';
+    }
 }

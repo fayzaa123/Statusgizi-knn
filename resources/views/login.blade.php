@@ -58,11 +58,13 @@
                                 @csrf
                                 <h4>Sign in to account</h4>
                                 <p>Enter your email & password to login</p>
-                                                            @error('email')
-                                <div class="alert alert-danger d-flex align-items-center" role="alert">
-                                    <span class="txt-light">{{ $message }} </span>
-                                </div>
-                            @enderror
+@if($errors->any())
+    <div class="alert alert-danger">
+        @foreach($errors->all() as $error)
+            <p>{{ $error }}</p>
+        @endforeach
+    </div>
+@endif
                                 <div class="form-group">
                                     <label class="col-form-label">Email Address</label>
                                     <input class="form-control" type="email" required=""
@@ -106,7 +108,7 @@
                                 <p class="mt-4 mb-0 text-center">Don't have account?<a class="ms-2"
                                         href="/register">Create Account</a></p>
 
-                                    
+
                                 <script>
                                     (function() {
                                         'use strict';

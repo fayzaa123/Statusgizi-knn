@@ -1,14 +1,20 @@
 <?php
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
-use App\Http\Controllers\DashboardController;
-use App\Http\Controllers\DatasetController;
-use App\Http\Controllers\DatauserController;
-use App\Http\Controllers\ProfileController;
-use App\Http\Controllers\HitungController;
+use App\Http\Middleware\AdminMiddleware;
 use App\Http\Controllers\HasilController;
+use App\Http\Controllers\HitungController;
+use App\Http\Controllers\DatasetController;
 use App\Http\Controllers\LandingController;
+use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\DatauserController;
+use App\Http\Controllers\DashboardController;
+
+
+
+
 
 Route::get('/', function () {
     return view('welcome');
@@ -18,17 +24,14 @@ Route::get('/login', function () {
     return view('login');
 });
 
-Route::get('/admin/dataset', function () {
-    return view('dataset');
-});
 
-Route::get('/admin/dashboard', function () {
-    return view('admin.dashboard-admin');
-})->name('dashboard-admin');
+
+
+
 
 Route::get('/user/dashboard', function () {
     return view('user.dashboard-user');
-});
+})->name('ortu.dashboard')->withoutMiddleware(AdminMiddleware::class);
 
 Route::get('/profile', function () {
     return view('profile');
@@ -50,6 +53,12 @@ Route::get('/user/hasil', function () {
     return view('user.hasil');
 });
 
+
+//Route::get('/admin/dashboard', [DashboardController::class, 'dashboard_admin'])->name('dashboard-admin');
+Route::get('/admin/dataset', function () {
+    return view('dataset');
+});
+
 Route::get('/user/hitung', [HitungController::class, 'ukur_balita'])->name('tampil.hitung');
 Route::post('/hitung/klasifikasi', [HitungController::class,'hitungKlasifikasi'])->name('hitung.klasifikasi');
 
@@ -59,7 +68,15 @@ Route::get('/register', [AuthController::class, 'index'])->name('register.index'
 // Route untuk proses registrasi dan login
 Route::post('/register', [AuthController::class, 'register'])->name('register');
 // Route untuk proses logout
+
+
+
+
 Route::post('/login', [AuthController::class, 'login'])->name('login');
+
+
+Route::get('/admin/dashboard', [DashboardController::class, 'dashboard_admin'])->name('admin.dashboard')->middleware('admin');
+
 
 // Route untuk menampilkan halaman dataset
 Route::get('/admin/dataset', [DatasetController::class, 'index'])->name('balita.index')->name('balita.index');

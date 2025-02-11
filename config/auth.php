@@ -38,12 +38,8 @@ return [
     'guards' => [
         'web' => [
             'driver' => 'session',
-            'provider' => 'users',
-        ],
-        'ortu' => [
-            'driver' => 'session',
             'provider' => 'orangtua',
-        ],
+        ]
     ],
 
     /*
