@@ -96,7 +96,7 @@
             <!-- Baris pertama: Halo Admin, 1 kolom penuh -->
             <div class="col-12">
               <div class="card o-hidden welcome-card">
-                <div class="card-body">
+                <div class="card-body" style="height: 150px">
                   <h4 class="mb-3 mt-1 f-w-500 mb-0 f-22">
                     Halo Admin
                     <span>
