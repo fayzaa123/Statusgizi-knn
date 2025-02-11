@@ -158,7 +158,7 @@
                                                                             <div class="col-md-4 position-relative">
                                                                                 <label class="form-label"
                                                                                     for="usia">Usia
-                                                                                    (minggu)</label>
+                                                                                    (bulan)</label>
                                                                                 <input class="form-control"
                                                                                     id="usia" name="usia"
                                                                                     type="text" placeholder="Umur"
@@ -240,7 +240,7 @@
                                                         <tr class="product-removes inbox-data">
                                                             <td>{{ $balita->id_balita }}</td>
                                                             <td>{{ $balita->nama }}</td>
-                                                            <td>{{ $balita->usia }} minggu</td>
+                                                            <td>{{ $balita->usia }} bulan</td>
                                                             <td>{{ $balita->jenis_kelamin }}</td>
                                                             <td>{{ $balita->berat }} kg</td>
                                                             <td>{{ $balita->tinggi }} cm</td>
@@ -336,7 +336,7 @@
                                                                                                             <label
                                                                                                                 class="form-label"
                                                                                                                 for="usia">Usia
-                                                                                                                (minggu)
+                                                                                                                (bulan)
                                                                                                             </label>
                                                                                                             <input
                                                                                                                 class="form-control"

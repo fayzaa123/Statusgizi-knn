@@ -12,7 +12,7 @@
     <meta name="author" content="pixelstrap">
     <link rel="icon" href="{{ asset('images/favicon.png') }}" type="image/x-icon">
     <link rel="shortcut icon" href="{{ asset('images/favicon.png') }}" type="image/x-icon">
-    <title>Register with Bg Image | Cuba - Premium Admin Template By Pixelstrap</title>
+    <title>Status Gizi Balita - KNN</title>
     <!-- Google font-->
     <link href="https://fonts.googleapis.com/css?family=Rubik:400,400i,500,500i,700,700i&amp;display=swap"
         rel="stylesheet">
@@ -41,9 +41,9 @@
     <!-- login page start-->
     <div class="container-fluid p-0">
         <div class="row m-0">
-            <div class="col-xl-5"><img class="bg-img-cover bg-center" src="{{ asset('images/login/3.jpg') }}"
+            <div class="col-xl-6"><img class="bg-img-cover bg-center" src="{{ asset('images/login/8.jpg') }}"
                     alt="looginpage"></div>
-            <div class="col-xl-7 p-0">
+            <div class="col-xl-6 p-0">
                 <div class="login-card login-dark">
                     <div>
                         <div><a class="logo text-start" href="index.html"><img class="img-fluid for-light"
@@ -53,10 +53,10 @@
                         <div class="login-main create-account">
                             <form class="theme-form" method="POST" action="{{ route('register') }}">
                                 @csrf
-                                <h4>Create your account</h4>
-                                <p>Enter your personal details to create account</p>
+                                <h4>Pendaftaran Akun</h4>
+                                <p>Lengkapi data berikut untuk melanjutkan pendaftaran</p>
                                 <div class="form-group">
-                                    <label class="col-form-label">Name</label>
+                                    <label class="col-form-label">Nama</label>
                                     <input class="form-control" type="text" required="" placeholder="Nama Anda"
                                         name="nama">
                                     @error('nama')
@@ -64,7 +64,7 @@
                                     @enderror
                                 </div>
                                 <div class="form-group">
-                                    <label class="col-form-label">Email Address</label>
+                                    <label class="col-form-label">Email</label>
                                     <input class="form-control" type="email" required=""
                                         placeholder="test@gmail.com" name="email">
                                     @error('email')
@@ -72,7 +72,7 @@
                                     @enderror
                                 </div>
                                 <div class="form-group">
-                                    <label class="col-form-label">Password</label>
+                                    <label class="col-form-label">Kata Sandi</label>
                                     <div class="form-input position-relative">
                                         <input class="form-control" type="password" name="password" required=""
                                             placeholder="*********">
@@ -84,22 +84,21 @@
                                 </div>
                                 <div class="form-group mb-0">
                                     <br>
-                                    <button class="btn btn-primary btn-block w-100" type="submit">Create
-                                        Account</button>
+                                    <button class="btn btn-primary btn-block w-100" type="submit">Daftar</button>
                                 </div>
                                 <div class="row align-items-center mt-4">
                                     <div class="col">
                                         <hr class="border-secondary">
                                     </div>
                                     <div class="col-auto">
-                                        <h6 class="text-muted m-0">Or</h6>
+                                        <h6 class="text-muted m-0">Atau</h6>
                                     </div>
                                     <div class="col">
                                         <hr class="border-secondary">
                                     </div>
                                 </div>
-                                <p class="mt-4 mb-0 text-center">Already have an account?<a class="ms-2"
-                                        href="/login">Sign in</a></p>
+                                <p class="mt-4 mb-0 text-center">Sudah memiliki akun?<a class="ms-2"
+                                        href="/login">Masuk</a></p>
                             </form>
                         </div>
                     </div>

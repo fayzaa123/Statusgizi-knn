@@ -43,9 +43,9 @@
     <!-- login page start-->
     <div class="container-fluid">
         <div class="row">
-            <div class="col-xl-5"><img class="bg-img-cover bg-center" src="{{ asset('images/login/3.jpg') }}"
+            <div class="col-xl-6"><img class="bg-img-cover bg-center" src="{{ asset('images/login/8.jpg') }}"
                     alt="looginpage"></div>
-            <div class="col-xl-7 p-0">
+            <div class="col-xl-6 p-0">
                 <div class="login-card login-dark">
                     <div>
                         <div><a class="logo text-start" href="index.html"><img class="img-fluid for-light"
@@ -66,13 +66,13 @@
     </div>
 @endif
                                 <div class="form-group">
-                                    <label class="col-form-label">Email Address</label>
+                                    <label class="col-form-label">Email</label>
                                     <input class="form-control" type="email" required=""
                                         placeholder="test@gmail.com" name="email">
 
                                 </div>
                                 <div class="form-group">
-                                    <label class="col-form-label">Password</label>
+                                    <label class="col-form-label">Kata sandi</label>
                                     <div class="form-input position-relative">
                                         <input class="form-control" type="password" name="password" required=""
                                             placeholder="*********">
@@ -85,12 +85,11 @@
                                 <div class="form-group mb-0">
                                     <div class="form-check">
                                         <input class="checkbox-primary form-check-input" id="checkbox1" type="checkbox">
-                                        <label class="text-muted form-check-label" for="checkbox1">Remember
-                                            password</label>
-                                    </div><a class="link" href="/forgot-password">Forgot password?</a>
+                                        <label class="text-muted form-check-label" for="checkbox1">Ingat
+                                            kata sandi</label>
+                                    </div><a class="link" href="/forgot-password">Lupa Kata sandi?</a>
                                     <div class="text-end">
-                                        <button class="btn btn-primary btn-block w-100 mt-3" type="submit">Sign
-                                            in</button>
+                                        <button class="btn btn-primary btn-block w-100 mt-3" type="submit">Masuk</button>
                                     </div>
                                 </div>
 
@@ -99,7 +98,7 @@
                                         <hr class="border-secondary">
                                     </div>
                                     <div class="col-auto">
-                                        <h6 class="text-muted m-0">Or</h6>
+                                        <h6 class="text-muted m-0">Atau</h6>
                                     </div>
                                     <div class="col">
                                         <hr class="border-secondary">

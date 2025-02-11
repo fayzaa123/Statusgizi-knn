@@ -32,7 +32,7 @@
             </a>
           </li>
 
-          <li class="sidebar-list">
+          <!--<li class="sidebar-list">
             <i class="fa-solid fa-thumbtack"></i>
             <a class="sidebar-link sidebar-title link-nav" href="{{ url('databalita') }}">
             <svg class="stroke-icon">
@@ -40,7 +40,7 @@
             </svg>
             <svg class="fill-icon">
               <use href="{{ asset('svg/icon-sprite.svg#fill-sample-page') }}"></use>
-            </svg><span>Data Balita</span></a></li>
+            </svg><span>Data Balita</span></a></li>-->
 
             <li class="sidebar-list">
               <i class="fa-solid fa-thumbtack"></i>
