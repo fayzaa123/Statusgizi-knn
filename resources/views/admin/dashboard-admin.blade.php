@@ -170,7 +170,7 @@
               </div>
             </div>
           
-            <!-- Kolom 3: Kalender -->
+            <!-- Kolom 3: Kalender 
             <div class="col-xxl-4 col-xl-4 col-md-4">
               <div class="card course-box"> 
                 <div class="card-body"> 
@@ -188,7 +188,7 @@
                   </div>
                 </div>
               </div>
-            </div>
+            </div>-->
           </div>
           
         </div>
