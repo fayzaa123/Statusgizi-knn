@@ -12,7 +12,7 @@ class DatasetController
      */
     public function index()
     {
-        $orangtua = Balita::all(); //
+        $balita = Balita::all(); //
         return view('admin.dataset', compact('balita'));
     }
 
