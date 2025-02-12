@@ -109,40 +109,40 @@
                                         <div class="col-md-4 position-relative">
                                             <label class="form-label" for="validationTooltip01">Nama Balita</label>
                                             <input class="form-control" id="validationTooltip01" type="text"
-                                                placeholder="Name" required="">
-                                            <div class="valid-tooltip">Looks good!</div>
+                                                placeholder="Nama" required="">
+                                            <div class="valid-tooltip">Sudah Benar!</div>
                                         </div>
 
                                         <div class="col-md-3 position-relative">
                                             <label class="form-label" for="validationTooltip04">Jenis kelamin</label>
                                             <select class="form-select" id="validationTooltip04" required="">
-                                                <option selected="" disabled="" value="">Choose...
+                                                <option selected="" disabled="" value="">Pilih...
                                                 </option>
                                                 <option>Perempuan </option>
                                                 <option>Laki-Laki </option>
                                             </select>
-                                            <div class="invalid-tooltip">Please select a valid state.</div>
+                                            <div class="invalid-tooltip">Sudah Benar!.</div>
                                         </div>
 
                                         <div class="col-md-4 position-relative">
-                                            <label class="form-label" for="validationTooltip02">Usia (bulan)</label>
+                                            <label class="form-label" for="validationTooltip02">Usia</label>
                                             <input class="form-control" id="validationTooltip02" type="text"
-                                                placeholder="Umur" required="" name="umur">
-                                            <div class="valid-tooltip">Looks good!</div>
+                                                placeholder="Bulan" required="" name="umur">
+                                            <div class="valid-tooltip">Sudah Benar!</div>
                                         </div>
 
                                         <div class="col-md-3 position-relative">
                                             <label class="form-label" for="validationTooltip05">Tinggi Badan</label>
                                             <input class="form-control" id="validationTooltip05" type="Cm"
-                                                required="" name="tinggi">
-                                            <div class="invalid-tooltip">Please provide a valid zip.</div>
+                                            placeholder="Cm" required="" name="tinggi">
+                                            <div class="invalid-tooltip">Sudah Benar!</div>
                                         </div>
 
                                         <div class="col-md-3 position-relative">
                                             <label class="form-label" for="validationTooltip05">Berat Badan</label>
                                             <input class="form-control" id="validationTooltip05" type="Kg"
-                                                required="" name="berat">
-                                            <div class="invalid-tooltip">Please provide a valid zip.</div>
+                                            placeholder="Kg" required="" name="berat">
+                                            <div class="invalid-tooltip">Sudah Benar!</div>
                                         </div>
 
                                         <div class="col-md-3 position-relative">
@@ -150,17 +150,17 @@
                                                 terdekat</label>
 
                                             <select class="form-select" id="validationTooltip04" required="" name="k">
-                                                <option selected disabled value="">Choose...</option>
+                                                <option selected disabled value="">Pilih...</option>
                                                 <option value="3">K3</option>
                                                 <option value="5">K5</option>
                                                 <option value="7">K7</option>
                                                 <option value="9">K9</option>
                                             </select>
-                                            <div class="invalid-tooltip">Please select a valid state.</div>
+                                            <div class="invalid-tooltip">Sudah Benar!</div>
                                         </div>
 
                                         <div class="col-12">
-                                            <button class="btn btn-primary" type="submit">Submit form</button>
+                                            <button class="btn btn-primary" type="submit">Hitung</button>
                                         </div>
                                     </form>
                                 </div>
