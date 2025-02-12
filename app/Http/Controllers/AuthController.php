@@ -48,15 +48,27 @@ class AuthController
             'password' => ['required'],
         ]);
 
-        // Coba autentikasi pengguna
-        if (Auth::guard('ortu')->attempt($credentials)) {
-            $request->session()->regenerate();
-            return redirect()->intended('user/dashboard');
+        if (Auth::guard('web')->attempt($credentials)) {
+            $user = Auth::guard('web')->user();
+
+            // Redirect berdasarkan email
+            if ($user->is_admin) {
+                return redirect()->route('admin.dashboard');
+            } else {
+                return redirect()->route('ortu.dashboard');
+            }
         }
 
         // Jika autentikasi gagal, kembalikan kembali ke halaman login dengan pesan kesalahan
         return back()->withErrors([
             'email' => 'The provided credentials do not match our records.',
         ]);
+    }
+
+    public function logout()
+    {
+        Auth::guard('web')->logout();
+
+        return redirect('/login');
     }
 }

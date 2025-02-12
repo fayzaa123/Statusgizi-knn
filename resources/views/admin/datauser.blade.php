@@ -100,11 +100,11 @@
 
                 <!-- Container-fluid starts-->
                 <div class="container-fluid e-category">
-                    <div class="row">              
+                    <div class="row">
                         <div class="col-sm-12">
                             <div class="card">
                                 <div class="card-header card-no-border text-end">
-                                    <div class="card-header-right-icon"><a class="btn btn-primary f-w-">
+                                    <div class="card-header-right-icon"><a class="">
                                             <!--href="#" data-bs-toggle="modal" data-bs-target="#dashboard8"><i
                                                 class="fa-solid fa-plus pe-2"></i>Tambah Data--></a>
                                         <div class="modal fade" id="dashboard8" tabindex="-1"
@@ -125,7 +125,7 @@
                                                                         <h5>Form Hitung Gizi Balita</h5>
                                                                     </div>
                                                                     <div class="card-body">
-                                                                         Form 
+                                                                         Form
                                                                         <form id="balitaForm" method="POST"
                                                                             action="{{ route('datauser.store') }}"
                                                                             class="row g-3 needs-validation custom-input"
@@ -142,7 +142,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="card-body px-0 pt-0">
+                                <div class="card-body mt-3 px-0 pt-0">
                                     <div class="list-product list-category">
                                         <div class="recent-table table-responsive custom-scrollbar">
                                             <table class="table" id="project-status">
@@ -222,7 +222,7 @@
                                                                                                                 value="{{ $datauser->nama }}"
                                                                                                                 required>
                                                                                                         </div>
-                                                                                                        
+
                                                                                                         <div
                                                                                                             class="col-md-4 position-relative">
                                                                                                             <label
@@ -284,7 +284,7 @@
                             </div>
                         </div>
                     </div>
-                </div>             
+                </div>
             <!-- Container-fluid Ends-->
             </div>
             <!-- footer start-->

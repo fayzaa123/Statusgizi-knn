@@ -41,7 +41,7 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('css/responsive.css') }}">
     </head>
 
-  <body> 
+  <body>
     <!-- loader starts-->
     <div class="loader-wrapper">
       <div class="loader-index"> <span></span></div>
@@ -66,11 +66,11 @@
 
       <!-- Page Body Start-->
       <div class="page-body-wrapper">
-        
+
               <!-- Page Sidebar Start-->
                 @include('component.sidebar-admin')
               <!-- Page Sidebar Ends-->
-      
+
         <div class="page-body">
           <div class="container-fluid">
             <div class="page-title">
@@ -80,7 +80,7 @@
                 </div>
                 <div class="col-sm-6">
                   <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="{{ url('admin.dashboard-admin') }}">                                       
+                    <li class="breadcrumb-item"><a href="{{ url('admin.dashboard-admin') }}">
                         <svg class="stroke-icon">
                           <use href="{{ asset('svg/icon-sprite.svg#stroke-home') }}"></use>
                         </svg></a></li>
@@ -95,8 +95,8 @@
           <div class="row">
             <!-- Baris pertama: Halo Admin, 1 kolom penuh -->
             <div class="col-12">
-              <div class="card o-hidden welcome-card">            
-                <div class="card-body">
+              <div class="card o-hidden welcome-card">
+                <div class="card-body" style="height: 150px">
                   <h4 class="mb-3 mt-1 f-w-500 mb-0 f-22">
                     Halo Admin
                     <span>
@@ -109,27 +109,27 @@
               </div>
             </div>
           </div>
-          
+
           <div class="row">
             <!-- Baris kedua: 3 kolom -->
             <!-- Kolom 1: Dataset -->
             <div class="col-xxl-4 col-xl-4 col-md-4">
-              <div class="card course-box"> 
-                <div class="card-body"> 
-                  <div class="course-widget"> 
-                    <div class="course-icon warning"> 
+              <div class="card course-box">
+                <div class="card-body">
+                  <div class="course-widget">
+                    <div class="course-icon warning">
                       <svg class="fill-icon">
                         <use href="{{ asset('svg/icon-sprite.svg#course-2') }}"></use>
                       </svg>
                     </div>
-                    <div> 
-                      <h4 class="mb-0"> 
-                        <span class="counter" data-target="80">0</span>+
+                    <div>
+                      <h4 class="mb-0">
+                        <span class="counter" data-target="{{$dataset}}">{{$dataset}}</span>+
                       </h4>
                       <span class="f-light">Dataset</span>
                       <a class="btn btn-light f-light" href="{{ url('admin/dataset') }}">
                         Lihat Dataset
-                        <span class="ms-2"> 
+                        <span class="ms-2">
                           <svg class="fill-icon f-light">
                             <use href="{{ asset('svg/icon-sprite.svg#arrowright') }}"></use>
                           </svg>
@@ -140,25 +140,25 @@
                 </div>
               </div>
             </div>
-          
+
             <!-- Kolom 2: Data User -->
             <div class="col-xxl-4 col-xl-4 col-md-4">
-              <div class="card course-box"> 
-                <div class="card-body"> 
-                  <div class="course-widget"> 
-                    <div class="course-icon"> 
+              <div class="card course-box">
+                <div class="card-body">
+                  <div class="course-widget">
+                    <div class="course-icon">
                       <svg class="fill-icon">
                         <use href="{{ asset('svg/icon-sprite.svg#course-1') }}"></use>
                       </svg>
                     </div>
-                    <div> 
-                      <h4 class="mb-0"> 
-                        <span class="counter" data-target="100">0</span>+
+                    <div>
+                      <h4 class="mb-0">
+                        <span class="counter" data-target="{{ $orangtua }}">{{ $orangtua }}</span>+
                       </h4>
                       <span class="f-light">Data User</span>
                       <a class="btn btn-light f-light" href="{{ url('admin/datauser') }}">
                         Lihat Data User
-                        <span class="ms-2"> 
+                        <span class="ms-2">
                           <svg class="fill-icon f-light">
                             <use href="{{ asset('svg/icon-sprite.svg#arrowright') }}"></use>
                           </svg>
@@ -169,14 +169,14 @@
                 </div>
               </div>
             </div>
-          
-            <!-- Kolom 3: Kalender 
-            <div class="col-xxl-4 col-xl-4 col-md-4">
-              <div class="card course-box"> 
-                <div class="card-body"> 
-                  <div class="course-widget"> 
-                    <div class="card get-card overflow-hidden"> 
-                      <div class="card default-inline-calender"> 
+
+            <!-- Kolom 3: Kalender -->
+            <!--<div class="col-xxl-4 col-xl-4 col-md-4">
+              <div class="card course-box">
+                <div class="card-body">
+                  <div class="course-widget">
+                    <div class="card get-card overflow-hidden">
+                      <div class="card default-inline-calender">
                         <h5>Kalender</h5>
                       </div>
                       <div class="card-body pt-0">
@@ -190,7 +190,7 @@
               </div>
             </div>-->
           </div>
-          
+
         </div>
         <!-- Container-fluid Ends-->
     </div>

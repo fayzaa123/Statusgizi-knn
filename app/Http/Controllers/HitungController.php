@@ -120,7 +120,17 @@ class HitungController
                 ];
 
             default:
-                return ['Silakan konsultasi dengan tenaga kesehatan untuk rekomendasi lebih lanjut'];
+                return [
+                    'Balita memiliki berat badan lebih rendah dari standar usianya, berisiko mengalami kekurangan energi dan nutrisi esensial.',
+                    'Makanan tinggi kalori dan protein untuk mempercepat pertumbuhan.',
+                    'Contoh: Susu, telur, daging merah, ikan, ayam, tahu, tempe, alpukat, keju, kacang-kacangan.',
+                    'MPASI tinggi energi dan nutrisi, seperti bubur dengan tambahan minyak zaitun atau santan.',
+                    'Makan lebih sering (4-5 kali sehari) dengan camilan sehat di antaranya.',
+                    'Susu tinggi kalori bisa diberikan setelah makan utama.',
+                    'Periksa ke tenaga medis untuk mendeteksi adanya infeksi atau masalah pencernaan.',
+                    'Berikan suplemen zat besi atau vitamin sesuai anjuran dokter.',
+                    'Pastikan anak cukup tidur dan bermain untuk merangsang pertumbuhan.',
+                ];
         }
     }
 }

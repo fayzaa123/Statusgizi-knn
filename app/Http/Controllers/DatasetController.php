@@ -19,7 +19,7 @@ class DatasetController
     /**
      * Show the form for creating a new resource.
      */
-    
+
     /**
      * Store a newly created resource in storage.
      */
@@ -53,7 +53,7 @@ class DatasetController
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(string $id)
+    public function edit(string $id_balita)
     {
         $balita = Balita::findOrFail($id_balita);
         return view('balita.edit', compact('balita'));
@@ -83,7 +83,7 @@ class DatasetController
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    public function destroy(string $id_balita)
     {
         $balita = Balita::findOrFail($id_balita);
         $balita->delete();

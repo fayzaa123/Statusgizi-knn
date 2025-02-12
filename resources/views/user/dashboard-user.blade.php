@@ -41,7 +41,7 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('css/responsive.css') }}">
     </head>
 
-  <body> 
+  <body>
     <!-- loader starts-->
     <div class="loader-wrapper">
       <div class="loader-index"> <span></span></div>
@@ -66,11 +66,11 @@
 
       <!-- Page Body Start-->
       <div class="page-body-wrapper">
-        
+
               <!-- Page Sidebar Start-->
                 @include('component.sidebar-user')
               <!-- Page Sidebar Ends-->
-      
+
         <div class="page-body">
           <div class="container-fluid">
             <div class="page-title">
@@ -80,7 +80,7 @@
                 </div>
                 <div class="col-sm-6">
                   <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="{{ url('admin.dashboard') }}">                                       
+                    <li class="breadcrumb-item"><a href="{{ url('admin.dashboard') }}">
                         <svg class="stroke-icon">
                           <use href="{{ asset('svg/icon-sprite.svg#stroke-home') }}"></use>
                         </svg></a></li>
@@ -94,20 +94,20 @@
           <!-- Container-fluid starts-->
           <div class="container-fluid default-dashboard">
               <div class="row widget-grid">
-                  <div class="col-sm-12"> 
+                  <div class="col-sm-12">
                       <div class="card profile-box">
                           <div class="card-body">
                               <div class="d-flex media-wrapper justify-content-between">
-                                  <div class="flex-grow-1"> 
+                                  <div class="flex-grow-1">
                                       <div class="greeting-user">
-                                          <h2 class="f-w-600">Welcome Emay Walter!</h2>
+                                          <h2 class="f-w-600">Welcome {{ Auth::user()->nama }}!</h2>
                                           <p>Here what’s happening in your account today</p>
                                           <div class="whatsnew-btn">
                                               <a class="btn btn-outline-white" href="{{ url('profile') }}" target="_blank">View Profile</a>
                                           </div>
                                       </div>
                                   </div>
-                                  <div>  
+                                  <div>
                                       <div class="clockbox">
                                           <svg id="clock" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600">
                                               <g id="face">
@@ -152,7 +152,7 @@
                         </div>
                       </div>
                     </div>
-                  </div>          
+                  </div>
               </div>
           </div>
         <!-- Container-fluid Ends-->
