@@ -47,8 +47,8 @@
                 <div class="login-card login-dark">
                     <div>
                         <div><a class="logo text-start" href="index.html"><img class="img-fluid for-light"
-                                    src="{{ asset('images/logo/logo.png') }}" alt="looginpage"><img
-                                    class="img-fluid for-dark" src="{{ asset('images/logo/logo_dark.png') }}"
+                                    src="{{ asset('images/logo/logo1.png') }}" alt="looginpage"><img
+                                    class="img-fluid for-dark" src="{{ asset('images/logo/logo1.png') }}"
                                     alt="looginpage"></a></div>
                         <div class="login-main create-account">
                             <form class="theme-form" method="POST" action="{{ route('register') }}">
