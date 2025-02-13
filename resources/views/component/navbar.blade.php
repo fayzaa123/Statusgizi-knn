@@ -44,7 +44,7 @@
                             src="{{ asset('images/dashboard/profile.png') }}" alt="">
                         <div class="flex-grow-1"><span>{{ Auth::user()->nama }}</span>
                             <p class="mb-0">
-                                @if (Auth::user()->nama === 'admin')
+                                @if (Auth::user()->nama === 'Admin')
                                     Admin
                                 @else
                                     Orangtua
