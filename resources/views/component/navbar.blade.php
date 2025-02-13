@@ -2,8 +2,8 @@
     <div class="header-wrapper row m-0">
         <div class="header-logo-wrapper col-auto p-0">
             <div class="logo-wrapper"><a href="index.html"><img class="img-fluid for-light"
-                        src="{{ asset('images/logo/logo.png') }}" alt=""><img class="img-fluid for-dark"
-                        src="{{ asset('images/logo/logo_dark.png') }}" alt=""></a></div>
+                        src="{{ asset('images/logo/logo1.png') }}" alt=""><img class="img-fluid for-dark"
+                        src="{{ asset('images/logo/logo1.png') }}" alt=""></a></div>
             <div class="toggle-sidebar"><i class="status_toggle middle sidebar-toggle" data-feather="align-center"></i>
             </div>
         </div>

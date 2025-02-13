@@ -79,7 +79,7 @@
                             </div>
                             <div class="col-sm-6">
                                 <ol class="breadcrumb">
-                                    <li class="breadcrumb-item"><a href="{{ url('user.hasil') }}">
+                                    <li class="breadcrumb-item"><a href="{{ url('hitung.klasifikasi') }}">
                                             <svg class="stroke-icon">
                                                 <use href="{{ asset('svg/icon-sprite.svg#stroke-home') }}"></use>
                                             </svg></a></li>
@@ -108,9 +108,9 @@
                                                             <div class="left-header-content">
                                                                 <h5>Hasil Status Gizi</h5>
                                                             </div>
-                                                            <div class="card-header-right-btn"><a class="c-o-light"
+                                                            <!--<div class="card-header-right-btn"><a class="c-o-light"
                                                                     href="{{ url('user.datahasil') }}">View All</a>
-                                                            </div>
+                                                            </div>-->
                                                         </div>
                                                     </div>
                                                     <div class="card-body pt-0">

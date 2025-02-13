@@ -49,15 +49,15 @@
                 <div class="login-card login-dark">
                     <div>
                         <div><a class="logo text-start" href="index.html"><img class="img-fluid for-light"
-                                    src="{{ asset('images/logo/logo.png') }}" alt="looginpage"><img
-                                    class="img-fluid for-dark" src="{{ asset('images/logo/logo_dark.png') }}"
+                                    src="{{ asset('images/logo/logo1.png') }}" alt="looginpage"><img
+                                    class="img-fluid for-dark" src="{{ asset('images/logo/logo1.png') }}"
                                     alt="looginpage"></a></div>
                         <div class="login-main">
 
                             <form class="theme-form" method="POST" action="{{ route('login') }}">
                                 @csrf
-                                <h4>Sign in to account</h4>
-                                <p>Enter your email & password to login</p>
+                                <h4>Selamat Datang</h4>
+                                <p>Lengkapi data berikut untuk masuk ke akun</p>
 @if($errors->any())
     <div class="alert alert-danger">
         @foreach($errors->all() as $error)
@@ -87,7 +87,7 @@
                                         <input class="checkbox-primary form-check-input" id="checkbox1" type="checkbox">
                                         <label class="text-muted form-check-label" for="checkbox1">Ingat
                                             kata sandi</label>
-                                    </div><a class="link" href="/forgot-password">Lupa Kata sandi?</a>
+                                    </div><a class="link" href="/forgot-password"></a>
                                     <div class="text-end">
                                         <button class="btn btn-primary btn-block w-100 mt-3" type="submit">Masuk</button>
                                     </div>
@@ -104,8 +104,8 @@
                                         <hr class="border-secondary">
                                     </div>
                                 </div>
-                                <p class="mt-4 mb-0 text-center">Don't have account?<a class="ms-2"
-                                        href="/register">Create Account</a></p>
+                                <p class="mt-4 mb-0 text-center">Belum Memiliki Akun?<a class="ms-2"
+                                        href="/register">Daftar</a></p>
 
 
                                 <script>
