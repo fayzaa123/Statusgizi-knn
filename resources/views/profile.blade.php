@@ -74,7 +74,7 @@
         <div class="page-body-wrapper">
 
             <!-- Page Sidebar Start-->
-            @include('component.sidebar-admin')
+            @include('component.sidebar-user')
             <!-- Page Sidebar Ends-->
 
             <div class="container-fluid">

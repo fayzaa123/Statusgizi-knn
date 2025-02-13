@@ -14,18 +14,18 @@ class HitungController
 
     public function hitungKlasifikasi(Request $request)
     {
-        // Validate input
+        // validasi input
         $request->validate([
             'umur' => 'required|numeric',
             'berat' => 'required|numeric',
             'tinggi' => 'required|numeric',
-            'k' => 'required|numeric' // number of neighbors
+            'k' => 'required|numeric' // nilai k untuk KNN
         ]);
 
-        // Get training data from database
+        // mengambil data latih dari database
         $trainingData = Balita::all();
 
-        // Calculate distances
+        // hitung jarak antara data uji dengan data latih
         $distances = [];
         foreach ($trainingData as $data) {
             $distance = sqrt(
@@ -44,16 +44,16 @@ class HitungController
             ];
         }
 
-        // Sort distances
+        /// urutkan berdasarkan jarak terdekat
         usort($distances, function($a, $b) {
             return $a['distance'] <=> $b['distance'];
         });
 
-        // Get k nearest neighbors
+        // ambil k tetangga terdekat
         $k = $request->k;
         $neighbors = array_slice($distances, 0, $k);
 
-        // Count status frequencies
+        // hitung jumlah status gizi dari tetangga terdekat
         $statusCount = [];
         foreach ($neighbors as $neighbor) {
             $status = $neighbor['status_gizi'];
@@ -63,10 +63,10 @@ class HitungController
             $statusCount[$status]++;
         }
 
-        // Get most frequent status
+        // tentukan hasil status gizi
         $predictedStatus = array_search(max($statusCount), $statusCount);
 
-        // Get rekomendasi
+        // tampilkan hasil status gizi
         $rekomendasi = $this->getRekomendasi($predictedStatus);
 
         return view('user.hasil', [
@@ -76,8 +76,11 @@ class HitungController
             'rekomendasi'=> $rekomendasi
         ]);
     }
+
+    // fungsi untuk mendapatkan rekomendasi makanan berdasarkan status gizi
     private function getRekomendasi($status)
     {
+        // rekomendasi berdasarkan status gizi
         switch($status) {
             case 'Gizi Baik':
                 return [
