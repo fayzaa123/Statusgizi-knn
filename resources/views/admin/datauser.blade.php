@@ -149,7 +149,7 @@
                                                 <thead>
                                                     <tr>
                                                         <th></th>
-                                                        <th> <span class="c-o-light f-w-600">Nama Balita</span></th>
+                                                        <th> <span class="c-o-light f-w-600">Nama User</span></th>
                                                         <th> <span class="c-o-light f-w-600">Email</span></th>
                                                         <th> <span class="c-o-light f-w-600">Action</span></th>
                                                     </tr>
