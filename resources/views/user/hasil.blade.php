@@ -125,7 +125,7 @@
                                                                     value="{{ $status_gizi }}">
                                                                 <button type="submit"
                                                                     class="c-o-light btn btn-link p-0 m-0"
-                                                                    style="text-decoration:underline;">Riwayat</button>
+                                                                    style="text-decoration:underline;">Simpan Data Hitung</button>
                                                             </form>
                                                         </div>
                                                     </div>
