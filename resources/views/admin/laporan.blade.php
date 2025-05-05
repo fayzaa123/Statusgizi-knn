@@ -132,22 +132,22 @@
                                                 <tr>
                                                     <th>Gizi Baik</th>
                                                     <td class="text-center">
-                                                        {{ $jumlah_status_terbaru->get('Baik', 0) }}</td>
+                                                        {{ $jumlah_status_terbaru->get('Gizi Baik', 0) }}</td>
                                                 </tr>
                                                 <tr>
                                                     <th>Gizi Buruk</th>
                                                     <td class="text-center">
-                                                        {{ $jumlah_status_terbaru->get('Buruk', 0) }}</td>
+                                                        {{ $jumlah_status_terbaru->get('Gizi Buruk', 0) }}</td>
                                                 </tr>
                                                 <tr>
                                                     <th>Gizi Kurang</th>
                                                     <td class="text-center">
-                                                        {{ $jumlah_status_terbaru->get('Kurang', 0) }}</td>
+                                                        {{ $jumlah_status_terbaru->get('Gizi Kurang', 0) }}</td>
                                                 </tr>
                                                 <tr>
                                                     <th>Gizi Lebih</th>
                                                     <td class="text-center">
-                                                        {{ $jumlah_status_terbaru->get('Lebih', 0) }}</td>
+                                                        {{ $jumlah_status_terbaru->get('Gizi Lebih', 0) }}</td>
                                                 </tr>
                                             </tbody>
                                         </table>
@@ -258,14 +258,14 @@
         new Chart(ctxBar, {
             type: 'bar',
             data: {
-                labels: ['Buruk', 'Kurang', 'Baik', 'Lebih'],
+                labels: ['Gizi Buruk', 'Gizi Kurang', 'Gizi Baik', 'GiziLebih'],
                 datasets: [{
                     label: 'Jumlah',
                     data: [
-                        {{ $jumlah_status_terbaru->get('Buruk', 0) }},
-                        {{ $jumlah_status_terbaru->get('Kurang', 0) }},
-                        {{ $jumlah_status_terbaru->get('Baik', 0) }},
-                        {{ $jumlah_status_terbaru->get('Lebih', 0) }}
+                        {{ $jumlah_status_terbaru->get('Gizi Buruk', 0) }},
+                        {{ $jumlah_status_terbaru->get('Gizi Kurang', 0) }},
+                        {{ $jumlah_status_terbaru->get('Gizi Baik', 0) }},
+                        {{ $jumlah_status_terbaru->get('Gizi Lebih', 0) }}
                     ],
                     backgroundColor: [
                         'rgba(255, 99, 132, 0.7)', // Buruk

@@ -106,7 +106,7 @@
                       <h5 class="mb-1"><a href="user-profile.html">{{ $balita->nama_balita }}</a></h5>
                       <span class="c-o-light">{{ $balita->jenis_kelamin }}</span>
                       <ul class="social-follow">
-                        <li><h5 class="mb-0">12</h5><span class="c-o-light">Usia</span></li>
+                        <li><h5 class="mb-0"></h5>{{ $balita->usia }}<span class="c-o-light">Usia</span></li>
                         @if($terbaru)
                         <li><h5 class="mb-0">{{ $terbaru->berat }}</h5><span class="c-o-light">Berat</span></li>
                         <li><h5 class="mb-0">{{ $terbaru->tinggi }}</h5><span class="c-o-light">Tinggi</span></li>
@@ -188,7 +188,7 @@
                             <td></td>
                             <td>{{ $loop->iteration }}</td>
                             <td>{{ $riwayat->tanggal_ukur->format('d-m-Y') }}</td>
-                            <td>12</td>
+                            <td>{{ $riwayat->usia }}</td>
                             <td>{{ $riwayat->berat }} kg</td>
                             <td>{{ $riwayat->tinggi }} cm</td>
                             <td>{{ $riwayat->status_gizi }}</td>
