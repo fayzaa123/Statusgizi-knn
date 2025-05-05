@@ -275,23 +275,23 @@
                                                                                                                 name="status_gizi"
                                                                                                                 required>
                                                                                                                 <option
-                                                                                                                    value="Baik"
-                                                                                                                    {{ $balita->status_gizi == 'Baik' ? 'selected' : '' }}>
-                                                                                                                    Baik
+                                                                                                                    value="Gizi Baik"
+                                                                                                                    {{ $balita->status_gizi == 'Gizi Baik' ? 'selected' : '' }}>
+                                                                                                                    Gizi Baik
                                                                                                                 </option>
                                                                                                                 <option
-                                                                                                                    value="Buruk"
-                                                                                                                    {{ $balita->status_gizi == 'Buruk' ? 'selected' : '' }}>
+                                                                                                                    value="Gizi Buruk"
+                                                                                                                    {{ $balita->status_gizi == 'Gizi Buruk' ? 'selected' : '' }}>
                                                                                                                     Buruk
                                                                                                                 </option>
                                                                                                                 <option
-                                                                                                                    value="Kurang"
-                                                                                                                    {{ $balita->status_gizi == 'Kurang' ? 'selected' : '' }}>
+                                                                                                                    value="Gizi Kurang"
+                                                                                                                    {{ $balita->status_gizi == 'Gizi Kurang' ? 'selected' : '' }}>
                                                                                                                     Kurang
                                                                                                                 </option>
                                                                                                                 <option
-                                                                                                                    value="Lebih"
-                                                                                                                    {{ $balita->status_gizi == 'Lebih' ? 'selected' : '' }}>
+                                                                                                                    value="Gizi Lebih"
+                                                                                                                    {{ $balita->status_gizi == 'Gizi Lebih' ? 'selected' : '' }}>
                                                                                                                     Lebih
                                                                                                                 </option>
                                                                                                             </select>

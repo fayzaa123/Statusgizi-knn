@@ -271,24 +271,24 @@
                                                                                                                 name="status_gizi"
                                                                                                                 required>
                                                                                                                 <option
-                                                                                                                    value="Baik"
-                                                                                                                    {{ $balita->status_gizi == 'Baik' ? 'selected' : '' }}>
-                                                                                                                    Baik
+                                                                                                                    value="Gizi Baik"
+                                                                                                                    {{ $balita->status_gizi == 'Gizi Baik' ? 'selected' : '' }}>
+                                                                                                                    Gizi Baik
                                                                                                                 </option>
                                                                                                                 <option
-                                                                                                                    value="Buruk"
-                                                                                                                    {{ $balita->status_gizi == 'Buruk' ? 'selected' : '' }}>
-                                                                                                                    Buruk
+                                                                                                                    value="Gizi Buruk"
+                                                                                                                    {{ $balita->status_gizi == 'Gizi Buruk' ? 'selected' : '' }}>
+                                                                                                                    Gizi Buruk
                                                                                                                 </option>
                                                                                                                 <option
-                                                                                                                    value="Kurang"
-                                                                                                                    {{ $balita->status_gizi == 'Kurang' ? 'selected' : '' }}>
-                                                                                                                    Kurang
+                                                                                                                    value="Gizi Kurang"
+                                                                                                                    {{ $balita->status_gizi == 'Gizi Kurang' ? 'selected' : '' }}>
+                                                                                                                    Gizi Kurang
                                                                                                                 </option>
                                                                                                                 <option
-                                                                                                                    value="Lebih"
-                                                                                                                    {{ $balita->status_gizi == 'Lebih' ? 'selected' : '' }}>
-                                                                                                                    Lebih
+                                                                                                                    value="Gizi Lebih"
+                                                                                                                    {{ $balita->status_gizi == 'Gizi Lebih' ? 'selected' : '' }}>
+                                                                                                                    Gizi Lebih
                                                                                                                 </option>
                                                                                                             </select>
                                                                                                         </div>
