@@ -147,8 +147,11 @@
                         </div>
                         <div class="card-body">
                           <p><strong>Status Gizi Balita: </strong> Sistem ini memudahkan Anda untuk mengetahui status gizi balita. Dari hasil yang ditampilkan, Anda juga akan mendapatkan rekomendasi langkah-langkah yang bisa dilakukan untuk mendukung pertumbuhan si kecil dan mencegah risiko stunting.</p>
-                          <p><strong>Teknologi yang Membantu Anda: </strong> Masukkan data balita Anda, dan sistem akan memberikan hasil status gizi, seperti "Normal", "Kurang Gizi", atau "Gizi Buruk". Tak hanya itu, sistem juga memberikan rekomendasi khusus yang mudah dipahami untuk mendukung kesehatan si kecil.</p>
+                          <p><strong>Teknologi yang Membantu Anda: </strong> Status gizi balita adalah ukuran kondisi gizi anak berdasarkan indikator pertumbuhan seperti berat badan, tinggi badan, dan usia. Status gizi dapat dikategorikan sebagai gizi baik, gizi kurang, gizi buruk, atau obesitas.</p>
                           <p><strong>Mudah dan Nyaman untuk Semua: </strong>Tampilan sistem dirancang sederhana dan ramah untuk semua pengguna. Warna dan desainnya dibuat nyaman, sehingga siapa saja dapat menggunakannya dengan mudah, bahkan bagi pengguna dengan keterbatasan.</p>
+                          <p><strong>Apa itu status gizi balita?: </strong> Sistem ini memudahkan Anda untuk mengetahui status gizi balita. Dari hasil yang ditampilkan, Anda juga akan mendapatkan rekomendasi langkah-langkah yang bisa dilakukan untuk mendukung pertumbuhan si kecil dan mencegah risiko stunting.</p>
+                          <p><strong>Mengapa status gizi balita penting?: </strong> Masukkan data balita Anda, dan sistem akan memberikan hasil status gizi, seperti "Normal", "Kurang Gizi", atau "Gizi Buruk". Tak hanya itu, sistem juga memberikan rekomendasi khusus yang mudah dipahami untuk mendukung kesehatan si kecil.</p>
+                          <p><strong>Bagaimana cara mengukur status gizi balita: </strong>Status gizi yang baik sangat penting untuk pertumbuhan dan perkembangan anak. Gizi yang cukup membantu meningkatkan daya tahan tubuh, perkembangan otak, serta mencegah penyakit dan masalah pertumbuhan seperti stunting.</p>
                         </div>
                       </div>
                     </div>
