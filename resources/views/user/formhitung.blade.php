@@ -33,6 +33,7 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('css/vendors/slick.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('css/vendors/slick-theme.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('css/vendors/scrollbar.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/vendors/select/bootstrap-select.min.css')}}">
     <link rel="stylesheet" type="text/css" href="{{ asset('css/vendors/animate.css') }}">
     <!-- Plugins CSS Ends -->
     <!-- Bootstrap CSS -->
@@ -106,7 +107,8 @@
                                 <div class="card-body">
                                     <form class="row g-3 needs-validation custom-input" novalidate="" method="POST" action="{{ route('hitung.klasifikasi') }}" enctype="multipart/form-data">
                                         @csrf
-                                        <div class="col-md-4 position-relative">
+                                        
+                                        <div class="col-md-3 position-relative">
                                             <label class="form-label" for="validationTooltip01">Nama Balita</label>
                                             <input class="form-control" id="validationTooltip01" type="text"
                                                 placeholder="Nama" required="">
@@ -124,7 +126,7 @@
                                             <div class="invalid-tooltip">Sudah Benar!.</div>
                                         </div>
 
-                                        <div class="col-md-4 position-relative">
+                                        <div class="col-md-3 position-relative">
                                             <label class="form-label" for="validationTooltip02">Usia</label>
                                             <input class="form-control" id="validationTooltip02" type="text"
                                                 placeholder="Bulan" required="" name="umur">
@@ -139,14 +141,15 @@
                                         </div>
 
                                         <div class="col-md-3 position-relative">
-                                            <label class="form-label" for="validationTooltip05">Berat Badan</label>
+                                            <label class="form-label mt-3" for="validationTooltip05">Berat Badan</label>
                                             <input class="form-control" id="validationTooltip05" type="Kg"
                                             placeholder="Kg" required="" name="berat">
                                             <div class="invalid-tooltip">Sudah Benar!</div>
                                         </div>
 
+
                                         <div class="col-md-3 position-relative">
-                                            <label class="form-label" for="validationTooltip04">Tetangga
+                                            <label class="form-label mt-3" for="validationTooltip04">Tetangga
                                                 terdekat</label>
 
                                             <select class="form-select" id="validationTooltip04" required="" name="k">
@@ -157,6 +160,12 @@
                                                 <option value="9">K9</option>
                                             </select>
                                             <div class="invalid-tooltip">Sudah Benar!</div>
+                                        </div>
+                                        
+                                        <div class="col-md-3 position-relative">
+                                        <label class="col-form-label mt-2">Date</label>
+                                        <input class="form-control" type="date" required="">
+                                        <div class="invalid-feedback">Please select date</div>
                                         </div>
 
                                         <div class="col-12">
@@ -205,6 +214,9 @@
     <script src="{{ asset('js/height-equal.js') }}"></script>
     <script src="{{ asset('js/custom-animated-form.js') }}"></script>
     <script src="{{ asset('js/custom-pwd-validation.js') }}"></script>
+    <script src="{{ asset('js/select/bootstrap-select.min.js') }}"></script>
+
+    <script src="{{ asset('js/cleave/custom-cleave.js') }}"></script>
     <!-- Plugins JS Ends -->
     <!-- Theme JS -->
     <script src="{{ asset('js/script.js') }}"></script>
