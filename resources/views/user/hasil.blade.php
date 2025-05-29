@@ -108,9 +108,9 @@
                                                             <div class="left-header-content">
                                                                 <h5>Hasil Status Gizi</h5>
                                                             </div>
-                                                            <!--<div class="card-header-right-btn"><a class="c-o-light"
-                                                                    href="{{ url('user.datahasil') }}">View All</a>
-                                                            </div>-->
+                                                            <div class="card-header-right-btn"><a class="c-o-light"
+                                                                    href="{{ url('user.riwayat') }}">Riwayat</a>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                     <div class="card-body pt-0">
