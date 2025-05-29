@@ -11,8 +11,8 @@ use App\Http\Controllers\LandingController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\DatauserController;
 use App\Http\Controllers\DashboardController;
-
-
+use App\Http\Controllers\RiwayatController;
+use App\Http\Controllers\DatabalitaController;
 
 
 
@@ -49,6 +49,10 @@ Route::get('/landing', function () {
 
 Route::get('/user/hasil', function () {
     return view('user.hasil');
+});
+
+Route::get('/user/riwayat', function () {
+    return view('user.riwayat');
 });
 
 
@@ -95,7 +99,9 @@ Route::get('/admin/datauser/{id_kelolauser}/edit', [DatauserController::class, '
 Route::put('/admin/datauser/{id_kelolauser}', [DatauserController::class, 'update'])->name('datauser.update');
 
 
-
+Route::get('/admin/databalita', function () {
+    return view('admin.databalita');
+});
 /** ADMIN **/
 
 Route::middleware(['admin'])->group(function () {
