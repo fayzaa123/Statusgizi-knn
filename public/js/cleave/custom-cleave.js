@@ -10,7 +10,7 @@
   var cleave2 = new Cleave("#cleave-date1", {
     date: true,
     delimiter: "-",
-    datePattern: ["d", "m", "Y"],
+    datePattern: ["D", "M", "Y"],
   });
 
   // Date2
