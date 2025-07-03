@@ -13,8 +13,7 @@ use App\Http\Controllers\DatauserController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\RiwayatController;
 use App\Http\Controllers\DatabalitaController;
-
-
+use App\Http\Controllers\FormBalitaController;
 
 Route::get('/', function () {
     return redirect('/login'); ;
@@ -32,7 +31,6 @@ Route::get('/login', function () {
 Route::get('/user/dashboard', function () {
     return view('user.dashboard-user');
 })->name('ortu.dashboard')->withoutMiddleware(AdminMiddleware::class);
-
 
 
 Route::get('/editprofile', function () {
@@ -58,6 +56,24 @@ Route::get('/user/riwayat', function () {
 
 //Route::get('/admin/dashboard', [DashboardController::class, 'dashboard_admin'])->name('dashboard-admin');
 
+# ROUTE USER <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+# ================================ MANAJEMEN DATA BALITA ================================
+
+// Route untuk menampilkan data balita
+Route::get('/user/balita', [FormBalitaController::class, 'index'])->name('data.balita');
+// Route untuk menampilkan halaman tambah data balita
+Route::get('/user/balita/tambah', [FormBalitaController::class, 'form_balita'])->name('form.balita');
+// Route untuk menyimpan data balita
+Route::post('/add-balita', [FormBalitaController::class,'store'])->name('add.balita');
+/// Route untuk menghapus data balita
+Route::delete('/user/balita/{id}', [FormBalitaController::class, 'destroy'])->name('delete.balita');
+// Route untuk menampilkan halaman edit data balita
+Route::get('/user/balita/{id}/edit', [FormBalitaController::class, 'edit'])->name('edit.balita');
+// Route untuk mengupdate data balita
+Route::put('/user/balita/{id}', [FormBalitaController::class, 'update'])->name('update.balita');
+
+# ================================ MANAJEMEN DATA BALITA ================================
 
 Route::get('/user/hitung', [HitungController::class, 'ukur_balita'])->name('tampil.hitung');
 Route::post('/hitung/klasifikasi', [HitungController::class,'hitungKlasifikasi'])->name('hitung.klasifikasi');
@@ -102,6 +118,9 @@ Route::put('/admin/datauser/{id_kelolauser}', [DatauserController::class, 'updat
 Route::get('/admin/databalita', function () {
     return view('admin.databalita');
 });
+
+
+
 /** ADMIN **/
 
 Route::middleware(['admin'])->group(function () {

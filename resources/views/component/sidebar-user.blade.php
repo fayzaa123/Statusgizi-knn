@@ -31,7 +31,20 @@
                 <span>Dashboard</span>
             </a>
           </li>
-         
+
+          <li class="sidebar-list">
+            <i class="fa-solid fa-thumbtack"></i>
+            <a class="sidebar-link sidebar-title link-nav" href="{{ url('user/balita') }}">
+                <svg class="stroke-icon">
+                    <use href="{{ asset('svg/icon-sprite.svg#stroke-widget') }}"></use>
+                </svg>
+                <svg class="fill-icon">
+                    <use href="{{ asset('svg/icon-sprite.svg#fill-widget') }}"></use>
+                </svg>
+                <span>Data Balita</span>
+            </a>
+          </li>
+
             <li class="sidebar-list">
               <i class="fa-solid fa-thumbtack"></i>
               <a class="sidebar-link sidebar-title link-nav" href="{{ url('user/hitung') }}">

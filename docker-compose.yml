@@ -1,0 +1,45 @@
+version: '3.8'
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: status-gizi-knn-laravel
+    ports:
+      - "8080:80"  # Akses Laravel via http://localhost:8080
+    # volume opsional untuk development: gunakan hanya jika ingin sinkronisasi live
+    volumes:
+      - .:/var/www
+    networks:
+      - app-network
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_DATABASE=statusgiziknn
+      - MYSQL_USER=statusgiziknn
+      - MYSQL_PASSWORD=12345678
+    depends_on:
+      - db
+
+  db:
+    image: mysql:8.0
+    container_name: mysql-db
+    ports:
+      - "3306:3306"
+    volumes:
+      - db-data:/var/lib/mysql
+    networks:
+      - app-network
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_DATABASE=statusgiziknn
+      - MYSQL_USER=statusgiziknn
+      - MYSQL_PASSWORD=12345678
+
+networks:
+  app-network:
+    driver: bridge
+
+volumes:
+  db-data:
+    driver: local
