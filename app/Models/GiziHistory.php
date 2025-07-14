@@ -4,28 +4,30 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Anak extends Model
+class GiziHistory extends Model
 {
     //
-    protected $table = 'balita';
+    protected $table = 'gizihistory';
     protected $primaryKey = 'id';
 
     protected $fillable = [
-        'nama_balita',
-        'jenis_kelamin',
-        'tanggal_lahir',
+        'balite_id',
+        'berat',
+        'tinggi',
+        'status_gizi',
         'orangtua_id',
+        'tanggal_ukur',
     ];
 
     protected $casts = [
-        'tanggal_lahir' => 'date',
+        'tanggal_ukur' => 'date',
     ];
 
     public function orangtua(){
         return $this->belongsTo(Orangtua::class);
     }
 
-    public function history(){
-        return $this->hasMany(GiziHistory::class, 'balita_id');
+    public function anak(){
+        return $this->belongsTo(Anak::class, 'balita_id');
     }
 }

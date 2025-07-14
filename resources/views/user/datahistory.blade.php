@@ -118,8 +118,6 @@
                                                     <tr>
                                                         <th></th>
                                                         <th> <span class="c-o-light f-w-600">Nama Balita</span></th>
-                                                        <th> <span class="c-o-light f-w-600">Jenis Kelamin</span></th>
-                                                        <th> <span class="c-o-light f-w-600">Tanggal Lahir</span></th>
                                                         <th> <span class="c-o-light f-w-600">Action</span></th>
                                                     </tr>
                                                 </thead>
@@ -129,14 +127,12 @@
                                                         <tr class="product-removes inbox-data">
                                                             <td>{{ $balita->id }}</td>
                                                             <td>{{ $balita->nama_balita }}</td>
-                                                            <td>{{ $balita->jenis_kelamin }}</td>
-                                                            <td>{{ $balita->tanggal_lahir->translatedFormat('d F Y') }}</td>
                                                             <td>
                                                                 <ul class="action">
 
                                                                     <!-- Edit Modal -->
                                                                     <li class="edit">
-                                                                        <a href="{{ route('edit.balita', $balita->id) }}" data-bs-toggle="" data-bs-target="{{ $balita->id }}">
+                                                                        <a href="{{ route('lihat.history', ['balita' => $balita->id]) }}" data-bs-toggle="" data-bs-target="{{ $balita->id }}">
                                                                             <i class="fa-regular fa-pen-to-square"></i>
                                                                         </a>
                                                                     </li>

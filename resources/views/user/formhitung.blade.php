@@ -107,27 +107,32 @@
                                 <div class="card-body">
                                     <form class="row g-3 needs-validation custom-input" novalidate="" method="POST" action="{{ route('hitung.klasifikasi') }}" enctype="multipart/form-data">
                                         @csrf
-                                        
+
                                         <div class="col-md-3 position-relative">
                                             <label class="form-label" for="validationTooltip01">Nama Balita</label>
-                                            <input class="form-control" id="validationTooltip01" type="text"
-                                                placeholder="Nama" required="">
+                                            <select name="nama_balita" id="validationTooltip04" class="form-select" required="">
+                                                <option value="">Pilih Balita</option>
+                                                    @foreach($balita as $balita)
+                                                <option value="{{ $balita->id }}  "
+                                                    data-tanggal-lahir="{{ $balita->tanggal_lahir }}"
+                                                    data-jenis-kelamin="{{ $balita->jenis_kelamin }}"
+                                                    >{{ $balita->nama_balita }}</option>
+                                                    @endforeach
+                                            </select>
                                             <div class="valid-tooltip">Sudah Benar!</div>
                                         </div>
 
                                         <div class="col-md-3 position-relative">
-                                            <label class="form-label" for="validationTooltip04">Jenis kelamin</label>
-                                            <select class="form-select" id="validationTooltip04" required="">
-                                                <option selected="" disabled="" value="">Pilih...
-                                                </option>
-                                                <option>Perempuan </option>
-                                                <option>Laki-Laki </option>
-                                            </select>
-                                            <div class="invalid-tooltip">Sudah Benar!.</div>
+                                            <label class="form-label" for="">Jenis Kelamin</label>
+                                            <input class="form-control" id="jenis_kelamin" type="text"
+                                                placeholder="P/L" required="" name="jenis_kelamin">
+                                            <div class="valid-tooltip">Sudah Benar!</div>
                                         </div>
 
+
+
                                         <div class="col-md-3 position-relative">
-                                            <label class="form-label" for="validationTooltip02">Usia</label>
+                                            <label class="form-label" for="validationTooltip02">Usia (bulan)</label>
                                             <input class="form-control" id="validationTooltip02" type="text"
                                                 placeholder="Bulan" required="" name="umur">
                                             <div class="valid-tooltip">Sudah Benar!</div>
@@ -141,7 +146,7 @@
                                         </div>
 
                                         <div class="col-md-3 position-relative">
-                                            <label class="form-label mt-3" for="validationTooltip05">Berat Badan</label>
+                                            <label class="form-label" for="validationTooltip05">Berat Badan</label>
                                             <input class="form-control" id="validationTooltip05" type="Kg"
                                             placeholder="Kg" required="" name="berat">
                                             <div class="invalid-tooltip">Sudah Benar!</div>
@@ -161,7 +166,7 @@
                                             </select>
                                             <div class="invalid-tooltip">Sudah Benar!</div>
                                         </div>
-                                        
+
                                         <div class="col-md-3 position-relative">
                                         <label class="col-form-label mt-2">Date</label>
                                         <input class="form-control" type="date" required="">
@@ -224,5 +229,47 @@
     <script src="{{ asset('js/theme-customizer/customizer.js') }}"></script>
 
 </body>
+
+<script>
+    document.getElementById('validationTooltip04').addEventListener('change', function() {
+    let selectedOption = this.options[this.selectedIndex];
+    let tanggalLahir = selectedOption.getAttribute('data-tanggal-lahir');
+    let jenisKelamin = selectedOption.getAttribute('data-jenis-kelamin');
+
+    if (tanggalLahir) {
+        let umur = hitungUmurDalamBulan(new Date(tanggalLahir));
+        document.getElementById('validationTooltip02').value = umur;
+    } else {
+        document.getElementById('validationTooltip02').value = '';
+    }
+
+    // Mengisi jenis kelamin
+    if (jenisKelamin) {
+        if(jenisKelamin==='L'){
+            jenisKelamin="Laki-laki";
+        }
+        else{
+            jenisKelamin="Perempuan";
+        }
+        document.getElementById('jenis_kelamin').value = jenisKelamin;
+    } else {
+        document.getElementById('jenis_kelamin').value = '';
+    }
+});
+
+function hitungUmurDalamBulan(tanggalLahir) {
+    let now = new Date();
+    let umurTahun = now.getFullYear() - tanggalLahir.getFullYear();
+    let umurBulan = now.getMonth() - tanggalLahir.getMonth();
+
+    if (umurBulan < 0) {
+        umurTahun--;
+        umurBulan += 12;
+    }
+
+    return (umurTahun * 12) + umurBulan;
+}
+
+</script>
 
 </html>

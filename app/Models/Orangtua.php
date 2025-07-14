@@ -18,4 +18,12 @@ class Orangtua extends Authenticatable
     {
         return $this->email === 'admin@gmail.com';
     }
+
+    public function anak(){
+        return $this->hasMany(Anak::class);
+    }
+
+    public function history(){
+        return $this->hasMany(GiziHistory::class);
+    }
 }

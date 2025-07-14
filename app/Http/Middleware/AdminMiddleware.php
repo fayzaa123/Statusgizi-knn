@@ -19,6 +19,7 @@ class AdminMiddleware
         if (!Auth::check()) {
             return redirect('login')->withErrors(['error' => 'Anda harus login terlebih dahulu.']);
         }
+
         if (Auth::user()->email !== 'admin@gmail.com') {
             return redirect('login')->withErrors(['error' => 'Anda tidak memiliki akses ke halaman ini.']);
         }

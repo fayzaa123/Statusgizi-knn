@@ -42,7 +42,7 @@
     <!-- Responsive CSS -->
     <link rel="stylesheet" type="text/css" href="{{ asset('css/responsive.css') }}">
   </head>
-  <body> 
+  <body>
     <!-- loader starts-->
     <div class="loader-wrapper">
       <div class="loader-index"> <span></span></div>
@@ -79,11 +79,11 @@
                 </div>
                 <div class="col-sm-6">
                   <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="{{ url('user.riwayat') }}">                                       
+                    <li class="breadcrumb-item"><a href="{{ url('user.riwayat') }}">
                         <svg class="stroke-icon">
                           <use href="{{ asset('svg/icon-sprite.svg#stroke-home') }}"></use>
                         </svg></a></li>
-                    
+
                     <li class="breadcrumb-item active">Riwayat Pengukuran</li>
                   </ol>
                 </div>
@@ -93,39 +93,60 @@
           <!-- Container-fluid starts-->
           <div class="container-fluid social-user-cards">
             <div class="row">
-              <div class="col-xl-4 col-sm-6 col-xxl-3 col-ed-4 box-col-4">
-                <div class="card social-profile">
+              <!-- Kolom Kiri: Profile + Grafik -->
+              <div class="col-xxl-6 col-lg-8 col-md-12">
+                <!-- Profile Card -->
+                <div class="card social-profile mb-4">
                   <div class="card-body">
-                    
                     <div class="social-details">
-                      <h5 class="mb-1"><a href="user-profile.html">Fayza MD</a></h5><span class="c-o-light">perempuan</span>
-                      
-                      <ul class="social-follow"> 
-                        <li>
-                          <h5 class="mb-0">12</h5><span class="c-o-light">Usia</span>
-                        </li>
-                        <li>
-                          <h5 class="mb-0">34.0k</h5><span class="c-o-light">Berat</span>
-                        </li>
-                        <li>
-                          <h5 class="mb-0">897</h5><span class="c-o-light">Tinggi</span>
-                        </li>
+                      <h5 class="mb-1"><a href="user-profile.html">{{ $balita->nama_balita }}</a></h5>
+                      <span class="c-o-light">{{ $balita->jenis_kelamin }}</span>
+                      <ul class="social-follow">
+                        <li><h5 class="mb-0">12</h5><span class="c-o-light">Usia</span></li>
+                        @if($terbaru)
+                        <li><h5 class="mb-0">{{ $terbaru->berat }}</h5><span class="c-o-light">Berat</span></li>
+                        <li><h5 class="mb-0">{{ $terbaru->tinggi }}</h5><span class="c-o-light">Tinggi</span></li>
+                        @endif
                       </ul>
                     </div>
-
-                    <div class="social-img-wrap"> 
-                        <div class="card-header-right-btn d-flex justify-content-center">
-                            <a class="btn btn-success">
-                                Gizi Baik
-                            </a>
-                        </div>
+                    @if($terbaru)
+                    <div class="social-img-wrap">
+                      <div class="card-header-right-btn d-flex justify-content-center">
+                        <a class="btn btn-success">{{ $terbaru->status_gizi }}</a>
+                      </div>
                     </div>
+                    @endif
+                  </div>
+                </div>
 
+                <!-- Grafik Card -->
+                <div class="card">
+                  <div class="card-header">
+                    <h5>Grafik Riwayat Pengukuran</h5>
+                    <ul class="nav nav-tabs card-header-tabs" id="chartTabs" role="tablist">
+                      <li class="nav-item" role="presentation">
+                        <button class="nav-link active" id="tinggi-tab" data-bs-toggle="tab" data-bs-target="#tinggi-chart" type="button" role="tab" aria-controls="tinggi-chart" aria-selected="true">Tinggi Badan</button>
+                      </li>
+                      <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="berat-tab" data-bs-toggle="tab" data-bs-target="#berat-chart" type="button" role="tab" aria-controls="berat-chart" aria-selected="false">Berat Badan</button>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="card-body">
+                    <div class="tab-content" id="chartTabsContent">
+                      <div class="tab-pane fade show active" id="tinggi-chart" role="tabpanel" aria-labelledby="tinggi-tab">
+                        <div id="tinggi-chart-container"></div>
+                      </div>
+                      <div class="tab-pane fade" id="berat-chart" role="tabpanel" aria-labelledby="berat-tab">
+                        <div id="berat-chart-container"></div>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
 
-              <div class="col-xxl-7 box-col-12"> 
+              <!-- Kolom Kanan: Tabel Riwayat -->
+              <div class="col-xxl-6 col-lg-4 col-md-12">
                 <div class="card heading-space">
                   <div class="card-header card-no-border">
                     <div class="header-top">
@@ -133,7 +154,12 @@
                       <div class="card-header-right-icon">
                         <div class="dropdown icon-dropdown">
                           <button class="btn dropdown-toggle" id="allProjects" type="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="icon-more-alt"></i></button>
-                          <div class="dropdown-menu dropdown-menu-end" aria-labelledby="allProjects"><a class="dropdown-item" href="#!">This Month</a><a class="dropdown-item" href="#!">Previous Month</a><a class="dropdown-item" href="#!">Last 3 Months</a><a class="dropdown-item" href="#!">Last 6 Months</a></div>
+                          <div class="dropdown-menu dropdown-menu-end" aria-labelledby="allProjects">
+                            <a class="dropdown-item" href="#!">This Month</a>
+                            <a class="dropdown-item" href="#!">Previous Month</a>
+                            <a class="dropdown-item" href="#!">Last 3 Months</a>
+                            <a class="dropdown-item" href="#!">Last 6 Months</a>
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -141,88 +167,46 @@
                   <div class="card-body px-0 pt-0 all-project-table">
                     <div class="recent-table table-responsive custom-scrollbar">
                       <table class="table" id="all-project-table">
-                        <thead> 
+                        <thead>
                           <tr>
-                            <th> </th>
+                            <th></th>
                             <th>No</th>
                             <th>Tanggal Ukur</th>
                             <th>Usia</th>
                             <th>Berat</th>
                             <th>Tinggi</th>
                             <th>Status</th>
-                            
                           </tr>
                         </thead>
-                        <tbody> 
+                        <tbody>
+                          @forelse($balita->history as $riwayat)
                           <tr class="inbox-data">
-                            <td> </td>
-                            <td> <a class="f-w-500" href="project-details.html">1</a></td>
-                            
-                            <td>20 jun, 2025</td>
+                            <td></td>
+                            <td>{{ $loop->iteration }}</td>
+                            <td>{{ $riwayat->tanggal_ukur->format('d-m-Y') }}</td>
                             <td>12</td>
-                            <td>12</td>
-                            <td>50</td>
-                            
-                            <td> <span class="badge badge-light-warning">Gizi kurang</span></td>
+                            <td>{{ $riwayat->berat }} kg</td>
+                            <td>{{ $riwayat->tinggi }} cm</td>
+                            <td>{{ $riwayat->status_gizi }}</td>
                           </tr>
-                          <tr class="inbox-data">
-                            <td> </td>
-                            <td> <a class="f-w-500" href="project-details.html">1</a></td>
-                            
-                            <td>20 jun, 2025</td>
-                            <td>12</td>
-                            <td>12</td>
-                            <td>50</td>
-                            
-                            <td> <span class="badge badge-light-danger">Gizi Buruk</span></td>
+                          @empty
+                          <tr>
+                            <td colspan="7" class="text-center">Belum ada data riwayat</td>
                           </tr>
-                          <tr class="inbox-data">
-                            <td> </td>
-                            <td> <a class="f-w-500" href="project-details.html">1</a></td>
-                            
-                            <td>20 jun, 2025</td>
-                            <td>12</td>
-                            <td>12</td>
-                            <td>50</td>
-                            
-                            <td> <span class="badge badge-light-warning">Gizi kurang</span></td>
-                          </tr>
-                          <tr class="inbox-data">
-                            <td> </td>
-                            <td> <a class="f-w-500" href="project-details.html">1</a></td>
-                            
-                            <td>20 jun, 2025</td>
-                            <td>12</td>
-                            <td>12</td>
-                            <td>50</td>
-                            
-                            <td> <span class="badge badge-light-success">Gizi baik</span></td>
-                          </tr>
-                          
+                          @endforelse
                         </tbody>
                       </table>
                     </div>
                   </div>
                 </div>
               </div>
-
-              <div class="col-sm-12 col-xl-6 box-col-6">
-                <div class="card">
-                  <div class="card-header">
-                    <h5>Grafik Riwayat Pengukuran </h5>
-                  </div>
-                  <div class="card-body">
-                    <div id="area-spaline"></div>
-                  </div>
-                </div>
-              </div>
-
             </div>
+
+
           </div>
-          <!-- Container-fluid Ends-->
-        </div>
+
         <!-- footer start-->
-        <footer class="footer">
+        <footer class="footer" style="margin-left: 0;">
           <div class="container-fluid">
             <div class="row">
               <div class="col-md-12 footer-copyright text-center">
@@ -267,5 +251,72 @@
     <script src="{{ asset('js/script.js') }}"></script>
     <script src="{{ asset('js/script1.js') }}"></script>
     <script src="{{ asset('js/theme-customizer/customizer.js') }}"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const historyData = {!! json_encode($balita->history->map(function($item) {
+                return [
+                    'tanggal' => $item->tanggal_ukur->format('Y-m-d'),
+                    'tinggi' => (float)$item->tinggi,
+                    'berat' => (float)$item->berat
+                ];
+            })) !!};
+
+            // Tahun ini
+            const year = new Date().getFullYear();
+            const xMin = new Date(`${year}-01-01`).getTime();
+            const xMax = new Date(`${year}-12-31`).getTime();
+
+            // Grafik Tinggi
+            const tinggiChart = new ApexCharts(document.querySelector("#tinggi-chart-container"), {
+                series: [{
+                    name: 'Tinggi Badan',
+                    data: historyData.map(item => [new Date(item.tanggal).getTime(), item.tinggi])
+                }],
+                chart: {
+                    type: 'line',
+                    height: 350
+                },
+                xaxis: {
+                    type: 'datetime',
+                    min: xMin,
+                    max: xMax,
+                    title: { text: 'Tanggal Ukur' }
+                },
+                yaxis: {
+                    title: { text: 'Tinggi (cm)' }
+                },
+                colors: ['#28a745']
+            });
+
+            // Grafik Berat
+            const beratChart = new ApexCharts(document.querySelector("#berat-chart-container"), {
+                series: [{
+                    name: 'Berat Badan',
+                    data: historyData.map(item => [new Date(item.tanggal).getTime(), item.berat])
+                }],
+                chart: {
+                    type: 'line',
+                    height: 350
+                },
+                xaxis: {
+                    type: 'datetime',
+                    min: xMin,
+                    max: xMax,
+                    title: { text: 'Tanggal Ukur' }
+                },
+                yaxis: {
+                    title: { text: 'Berat (kg)' }
+                },
+                colors: ['#007bff']
+            });
+
+            tinggiChart.render();
+            beratChart.render();
+        });
+        </script>
+
+
+
   </body>
 </html>

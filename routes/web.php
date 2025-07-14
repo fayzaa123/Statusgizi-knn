@@ -4,14 +4,16 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Middleware\AdminMiddleware;
+use App\Http\Middleware\CheckMiddleware;
 use App\Http\Controllers\HasilController;
 use App\Http\Controllers\HitungController;
 use App\Http\Controllers\DatasetController;
+use App\Http\Controllers\HistoryController;
 use App\Http\Controllers\LandingController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\RiwayatController;
 use App\Http\Controllers\DatauserController;
 use App\Http\Controllers\DashboardController;
-use App\Http\Controllers\RiwayatController;
 use App\Http\Controllers\DatabalitaController;
 use App\Http\Controllers\FormBalitaController;
 
@@ -21,7 +23,7 @@ Route::get('/', function () {
 
 Route::get('/login', function () {
     return view('login');
-});
+})->middleware(CheckMiddleware::class)->name('login');
 
 
 
@@ -51,7 +53,7 @@ Route::get('/user/hasil', function () {
 
 Route::get('/user/riwayat', function () {
     return view('user.riwayat');
-});
+})->name('riwayat');
 
 
 //Route::get('/admin/dashboard', [DashboardController::class, 'dashboard_admin'])->name('dashboard-admin');
@@ -73,7 +75,15 @@ Route::get('/user/balita/{id}/edit', [FormBalitaController::class, 'edit'])->nam
 // Route untuk mengupdate data balita
 Route::put('/user/balita/{id}', [FormBalitaController::class, 'update'])->name('update.balita');
 
-# ================================ MANAJEMEN DATA BALITA ================================
+# ================================ MANAJEMEN DATA BALITA END ================================
+
+
+# ================================ HISTORY HITUNG ===========================
+
+// Route untuk menampilkan data history hitung
+Route::get('/user/history', [HistoryController::class, 'index'])->name('data.history');
+Route::get('/user/history/{balita}/riwayat', [HistoryController::class, 'edit'])->name('lihat.history');
+# ================================ HISTORY HITUNG END ===========================
 
 Route::get('/user/hitung', [HitungController::class, 'ukur_balita'])->name('tampil.hitung');
 Route::post('/hitung/klasifikasi', [HitungController::class,'hitungKlasifikasi'])->name('hitung.klasifikasi');

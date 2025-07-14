@@ -2,14 +2,17 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Anak;
 use App\Models\Balita;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class HitungController
 {
     public function ukur_balita()
     {
-        return view('user.formhitung');
+        $balita = Anak::where('orangtua_id', Auth::id())->get();
+        return view('user.formhitung', compact('balita'));
     }
 
     public function hitungKlasifikasi(Request $request)
