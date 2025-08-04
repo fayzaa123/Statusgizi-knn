@@ -67,7 +67,11 @@
       <div class="page-body-wrapper">
 
         <!-- Page Sidebar Start-->
-        @include('component.sidebar-user')
+        @if(Auth::user() && Auth::user()->email == 'admin@gmail.com')
+    @include('component.sidebar-admin')
+@else
+    @include('component.sidebar-user')
+@endif
         <!-- Page Sidebar Ends-->
 
         <div class="page-body">

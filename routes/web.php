@@ -82,6 +82,7 @@ Route::put('/user/balita/{id}', [FormBalitaController::class, 'update'])->name('
 
 // Route untuk menampilkan data history hitung
 Route::get('/user/history', [HistoryController::class, 'index'])->name('data.history');
+Route::get('/admin/databalitaa', [HistoryController::class, 'index2'])->name('admin.history');
 Route::get('/user/history/{balita}/riwayat', [HistoryController::class, 'edit'])->name('lihat.history');
 Route::get('/laporan', [HistoryController::class, 'report'])->name('report.history');
 # ================================ HISTORY HITUNG END ===========================

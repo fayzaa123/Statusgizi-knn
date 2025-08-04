@@ -25,6 +25,20 @@ class HistoryController
         return view('user.datahistory', compact('balita'));
     }
 
+        public function index2()
+    {
+        # Menampilkan data balita yang dimiliki oleh orangtua yang sedang login
+        //$balita = Anak::where('orangtua_id', Auth::id())->get(); //
+
+        $balita = Anak::whereHas('history') // hanya balita yang punya riwayat
+                ->with(['history' => function ($query) {
+                    $query->latest('tanggal_ukur');
+                }])
+                ->get();
+
+        return view('admin.datahistory', compact('balita'));
+    }
+
     public function edit($id)
     {
         //$balita = Anak::findOrFail($id); // Cari data berdasarkan ID
