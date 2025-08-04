@@ -11,7 +11,7 @@ class GiziHistory extends Model
     protected $primaryKey = 'id';
 
     protected $fillable = [
-        'balite_id',
+        'balita_id',
         'berat',
         'tinggi',
         'status_gizi',

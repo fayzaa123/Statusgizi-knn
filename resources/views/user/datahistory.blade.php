@@ -311,21 +311,7 @@
                                                                     </div>
 
 
-                                                                    <li class="delete">
-                                                                        <a href="{{ route('delete.balita', $balita->id) }}"
-                                                                            onclick="event.preventDefault();
-                                                                            if(confirm('Are you sure you want to delete this data?')) {
-                                                                              document.getElementById('delete-form-{{ $balita->id }}').submit();}">
-                                                                            <i class="fa-solid fa-trash-can"></i>
-                                                                        </a>
-                                                                        <form
-                                                                            id="delete-form-{{ $balita->id }}"
-                                                                            action="{{ route('delete.balita', $balita->id) }}"
-                                                                            method="POST" style="display: none;">
-                                                                            @csrf
-                                                                            @method('DELETE')
-                                                                        </form>
-                                                                    </li>
+
                                                                 </ul>
                                                             </td>
                                                         </tr>

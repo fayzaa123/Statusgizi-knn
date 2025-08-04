@@ -72,14 +72,15 @@
               <i class="fa-solid fa-thumbtack"></i>
               <a class="sidebar-link sidebar-title link-nav" href="{{ url('/admin/databalita') }}">
                   <svg class="stroke-icon">
-                      <use href="{{ asset('svg/icon-sprite.svg#stroke-form') }}"></use>
+                      <use href="{{ asset('svg/icon-sprite.svg#stroke-report') }}"></use>
                   </svg>
                   <svg class="fill-icon">
-                      <use href="{{ asset('svg/icon-sprite.svg#fill-form') }}"></use>
+                      <use href="{{ asset('svg/icon-sprite.svg#fill-report') }}"></use>
                   </svg>
-                  <span>Data Balita</span>
+                  <span>Laporan</span>
               </a>
             </li>
+
 
           </ul>
         </div>

@@ -83,11 +83,12 @@ Route::put('/user/balita/{id}', [FormBalitaController::class, 'update'])->name('
 // Route untuk menampilkan data history hitung
 Route::get('/user/history', [HistoryController::class, 'index'])->name('data.history');
 Route::get('/user/history/{balita}/riwayat', [HistoryController::class, 'edit'])->name('lihat.history');
+Route::get('/laporan', [HistoryController::class, 'report'])->name('report.history');
 # ================================ HISTORY HITUNG END ===========================
 
 Route::get('/user/hitung', [HitungController::class, 'ukur_balita'])->name('tampil.hitung');
 Route::post('/hitung/klasifikasi', [HitungController::class,'hitungKlasifikasi'])->name('hitung.klasifikasi');
-
+Route::post('/simpan-riwayat', [HitungController::class, 'simpanRiwayat'])->name('data.simpanriwayat');
 
 // Route untuk halaman login dan register
 Route::get('/register', [AuthController::class, 'index'])->name('register.index');

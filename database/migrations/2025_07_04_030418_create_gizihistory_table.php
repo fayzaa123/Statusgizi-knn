@@ -13,11 +13,11 @@ return new class extends Migration
     {
         Schema::create('gizihistory', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('balita_id')->constrained()->onDelete('cascade'); // Relasi ke balita
+            $table->foreignId('balita_id')->constrained('balita')->onDelete('cascade'); // Relasi ke balita
             $table->decimal('berat', 5, 2); // Berat badan dengan 2 angka desimal
             $table->decimal('tinggi', 5, 2); // Tinggi badan dengan 2 angka desimal
             $table->string('status_gizi');
-            $table->foreignId('orangtua_id')->constrained()->onDelete('cascade'); // Relasi ke orangtua
+            $table->foreignId('orangtua_id')->constrained('orangtua')->onDelete('cascade'); // Relasi ke orangtua
             $table->date('tanggal_ukur');
             $table->timestamps();
         });

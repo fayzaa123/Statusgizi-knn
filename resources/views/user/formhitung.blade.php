@@ -108,15 +108,17 @@
                                     <form class="row g-3 needs-validation custom-input" novalidate="" method="POST" action="{{ route('hitung.klasifikasi') }}" enctype="multipart/form-data">
                                         @csrf
 
+
+
                                         <div class="col-md-3 position-relative">
                                             <label class="form-label" for="validationTooltip01">Nama Balita</label>
-                                            <select name="nama_balita" id="validationTooltip04" class="form-select" required="">
+                                            <select name="id" id="validationTooltip04" class="form-select" required="">
                                                 <option value="">Pilih Balita</option>
-                                                    @foreach($balita as $balita)
-                                                <option value="{{ $balita->id }}  "
-                                                    data-tanggal-lahir="{{ $balita->tanggal_lahir }}"
-                                                    data-jenis-kelamin="{{ $balita->jenis_kelamin }}"
-                                                    >{{ $balita->nama_balita }}</option>
+                                                    @foreach($balita as $b)
+                                                <option value="{{ $b->id }}  "
+                                                    data-tanggal-lahir="{{ $b->tanggal_lahir }}"
+                                                    data-jenis-kelamin="{{ $b->jenis_kelamin }}"
+                                                    >{{ $b->nama_balita }}</option>
                                                     @endforeach
                                             </select>
                                             <div class="valid-tooltip">Sudah Benar!</div>
@@ -168,7 +170,7 @@
                                         </div>
 
                                         <div class="col-md-3 position-relative">
-                                        <label class="col-form-label mt-2">Date</label>
+                                        <label class="col-form-label mt-2">Tanggal Ukur</label>
                                         <input class="form-control" type="date" required="">
                                         <div class="invalid-feedback">Please select date</div>
                                         </div>

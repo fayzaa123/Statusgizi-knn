@@ -36,10 +36,10 @@
             <i class="fa-solid fa-thumbtack"></i>
             <a class="sidebar-link sidebar-title link-nav" href="{{ url('user/balita') }}">
                 <svg class="stroke-icon">
-                    <use href="{{ asset('svg/icon-sprite.svg#stroke-widget') }}"></use>
+                    <use href="{{ asset('svg/icon-sprite.svg#stroke-user') }}"></use>
                 </svg>
                 <svg class="fill-icon">
-                    <use href="{{ asset('svg/icon-sprite.svg#fill-widget') }}"></use>
+                    <use href="{{ asset('svg/icon-sprite.svg#fill-user') }}"></use>
                 </svg>
                 <span>Data Balita</span>
             </a>
@@ -49,10 +49,10 @@
               <i class="fa-solid fa-thumbtack"></i>
               <a class="sidebar-link sidebar-title link-nav" href="{{ url('user/hitung') }}">
                   <svg class="stroke-icon">
-                      <use href="{{ asset('svg/icon-sprite.svg#stroke-widget') }}"></use>
+                      <use href="{{ asset('svg/icon-sprite.svg#stroke-files') }}"></use>
                   </svg>
                   <svg class="fill-icon">
-                      <use href="{{ asset('svg/icon-sprite.svg#fill-widget') }}"></use>
+                      <use href="{{ asset('svg/icon-sprite.svg#fill-files') }}"></use>
                   </svg>
                   <span>Ukur Balita</span>
               </a>

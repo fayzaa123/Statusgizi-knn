@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Anak;
 use App\Models\Balita;
+use App\Models\GiziHistory;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -37,6 +38,7 @@ class HitungController
                 pow($data->tinggi - $request->tinggi, 2)
             );
             $distances[] = [
+                'id' => $data->id,
                 'nama' => $data->nama,
                 'usia' => $data->usia,
                 'jenis_kelamin' => $data->jenis_kelamin,
@@ -76,8 +78,30 @@ class HitungController
             'status_gizi' => $predictedStatus,
             'neighbors' => $neighbors,
             'k' => $k,
-            'rekomendasi'=> $rekomendasi
+            'rekomendasi'=> $rekomendasi,
+            'nama' => $request->nama,
+            'umur' => $request->umur,
+            'berat' => $request->berat,
+            'tinggi' => $request->tinggi,
+            'id' => $request->id,
+
         ]);
+    }
+
+    public function simpanRiwayat(Request $request)
+    {
+
+
+        $idBalita = $request->id;
+        GiziHistory::create([
+            'balita_id' => $idBalita,
+            'berat' => $request->berat,
+            'tinggi' => $request->tinggi,
+            'status_gizi' => $request->status_gizi,
+            'orangtua_id' => Auth::id(),
+            'tanggal_ukur' => now(),
+        ]);
+        return redirect()->route('data.history')->with('success', 'Riwayat berhasil disimpan!');
     }
 
     // fungsi untuk mendapatkan rekomendasi makanan berdasarkan status gizi

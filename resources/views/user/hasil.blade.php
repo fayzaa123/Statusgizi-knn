@@ -106,11 +106,27 @@
                                                     <div class="card-header card-no-border">
                                                         <div class="common-space">
                                                             <div class="left-header-content">
-                                                                <h5>Hasil Status Gizi</h5>
+                                                                <h5>Hasil Status Gizi untuk id = {{$id}}</h5>
                                                             </div>
                                                             <div class="card-header-right-btn"><a class="c-o-light"
-                                                                    href="{{ url('user.riwayat') }}">Riwayat</a>
+                                                                    href="{{ route('data.history') }}">Riwayat</a>
                                                             </div>
+                                                            
+                                                            <form action="{{ route('data.simpanriwayat') }}"
+                                                                method="POST" style="display:inline;">
+                                                                @csrf
+                                                                <input type="hidden" name="id"
+                                                                    value="{{ $id}}">
+                                                                <input type="hidden" name="berat"
+                                                                    value="{{ $berat }}">
+                                                                <input type="hidden" name="tinggi"
+                                                                    value="{{ $tinggi }}">
+                                                                <input type="hidden" name="status_gizi"
+                                                                    value="{{ $status_gizi }}">
+                                                                <button type="submit"
+                                                                    class="c-o-light btn btn-link p-0 m-0"
+                                                                    style="text-decoration:underline;">Riwayat</button>
+                                                            </form>
                                                         </div>
                                                     </div>
                                                     <div class="card-body pt-0">
