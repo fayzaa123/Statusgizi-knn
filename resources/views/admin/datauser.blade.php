@@ -82,7 +82,7 @@
                     <div class="page-title">
                         <div class="row">
                             <div class="col-sm-6">
-                                <h3>Data Balita</h3>
+                                <h3>Data User</h3>
                             </div>
                             <div class="col-sm-6">
                                 <ol class="breadcrumb">
@@ -91,7 +91,7 @@
                                                 <use href="{{ asset('svg/icon-sprite.svg#stroke-sample-page') }}">
                                                 </use>
                                             </svg></a></li>
-                                    <li class="breadcrumb-item active"> Data Balita</li>
+                                    <li class="breadcrumb-item active"> Data User</li>
                                 </ol>
                             </div>
                         </div>

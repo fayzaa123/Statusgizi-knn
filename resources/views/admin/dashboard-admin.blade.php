@@ -170,6 +170,34 @@
               </div>
             </div>
 
+            <!-- Kolom 3: Data Balita -->
+            <div class="col-xxl-4 col-xl-4 col-md-4">
+              <div class="card course-box">
+                <div class="card-body">
+                  <div class="course-widget">
+                    <div class="course-icon">
+                      <svg class="fill-icon">
+                        <use href="{{ asset('svg/icon-sprite.svg#course-1') }}"></use>
+                      </svg>
+                    </div>
+                    <div>
+                      <h4 class="mb-0">
+                        <span class="counter" data-target="{{ $orangtua }}">{{ $orangtua }}</span>+
+                      </h4>
+                      <span class="f-light">Data Balita</span>
+                      <a class="btn btn-light f-light" href="{{ url('admin/databalitaa') }}">
+                        Lihat Data User
+                        <span class="ms-2">
+                          <svg class="fill-icon f-light">
+                            <use href="{{ asset('svg/icon-sprite.svg#arrowright') }}"></use>
+                          </svg>
+                        </span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
             <!-- Kolom 3: Kalender -->
             <!--<div class="col-xxl-4 col-xl-4 col-md-4">
               <div class="card course-box">

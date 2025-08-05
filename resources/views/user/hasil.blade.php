@@ -106,11 +106,11 @@
                                                     <div class="card-header card-no-border">
                                                         <div class="common-space">
                                                             <div class="left-header-content">
-                                                                <h5>Hasil Status Gizi untuk id = {{$id}}</h5>
+                                                                <h5>Hasil Status Gizi</h5>
                                                             </div>
-                                                            <div class="card-header-right-btn"><a class="c-o-light"
+                                                            <!--<div class="card-header-right-btn"><a class="c-o-light"
                                                                     href="{{ route('data.history') }}">Riwayat</a>
-                                                            </div>
+                                                            </div>-->
                                                             
                                                             <form action="{{ route('data.simpanriwayat') }}"
                                                                 method="POST" style="display:inline;">
